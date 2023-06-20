@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .main-text {
-    color: red;
+    color: rgb(49, 10, 121);
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 200;
+    font-family: 'Pacifico', cursive;
+    text-transform: lowercase;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    cursor: wait;
 }
