@@ -1,0 +1,25 @@
+body {
+    background: gray;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: red;
+    display: inline-block;
+}
+
+.block {
+    width: 400px;
+    height: 100px;
+    padding: 20px;
+    border: 6px solid red;
+    background: aqua;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
