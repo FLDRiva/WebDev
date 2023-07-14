@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;600&family=Playfair+Display:wght@700&display=swap');
+
+ body {
+    margin: 0px;
+    min-width: auto;
+    max-height: 4093px;
+    background: #fff;
+ }
+
+.header {
+    margin: 0px 50px;
+}
+
+ .main-header {
+   display: flex;
+   justify-content: space-between;
+   margin-left: 3vw;
+   margin-right: 3vw;
+   margin-top: 4vh;
+}
+
+ .about {
+
+ }
+
+ .ellement-1,
+ .ellement-2,
+ .ellement-3,
+ .ellement-4 {
+    text-decoration: none;
+    color: #331B3B;
+    font-family: Hind Vadodara;
+    font-size: 16px;
+    margin-right: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+ }
+
+ .about span {
+    font-weight: 600;
+ }
+
+ .title {
+
+ }
+
+ .title-text {
+    color: #331B3B;
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.24px;
+ }
+
+.vector-social {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+}
+
+.vector-social svg {
+    max-width: 867.538px;
+    max-height: 819.823px;
+    flex-shrink: 0;
+}
+
+.social-link {
+    display: flex;
+}
+
+.arround {
+   transform: rotate(30.5deg);
+   flex-shrink: 0;
+   color: #331B3B;
+   width: 43.614px;
+   height: 49.614px;
+   margin-left: 25px;
+   display: flex;
+   border: 1px solid #000;
+   border-radius: 55px 40px;
+   position: relative;
+}
+
+.social-icons{
+    display: flex;
+    margin-top: 48.8px;
+    flex-wrap: wrap;  
+    border: 1px solid #000;
+}
+
+.fb {
+   background-image: url(img/img-facebook.png);
+   width: 10px;
+   height: 20px;
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   transform: rotate(-30deg);
+}
