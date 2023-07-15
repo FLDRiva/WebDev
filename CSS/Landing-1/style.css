@@ -70,7 +70,6 @@
 
 .arround {
    transform: rotate(30.5deg);
-   flex-shrink: 0;
    color: #331B3B;
    width: 43.614px;
    height: 49.614px;
@@ -79,13 +78,6 @@
    border: 1px solid #000;
    border-radius: 55px 40px;
    position: relative;
-}
-
-.social-icons{
-    display: flex;
-    margin-top: 48.8px;
-    flex-wrap: wrap;  
-    border: 1px solid #000;
 }
 
 .fb {
@@ -190,17 +182,11 @@
 }
 
 .main-what-business {
-   width: 1387px;
    height: 589px;
    background-color: #ECF7FF;
    display: flex;
    justify-content: center;
    flex-direction: column;
-   /* align-items: center; */
-}
-
-.main-what-business {
-  
 }
 
 .what-text {
@@ -212,11 +198,145 @@
    font-weight: 700;
    line-height: 106.3%; /* 51.024px */
    letter-spacing: -0.48px;
-   margin-bottom: 29vh;
+   margin-bottom: 12vh;
 }
 
 .what-text span {
    font-weight: 300;
    line-height: 106.3%;
    letter-spacing: -0.48px;
+}
+
+.arrow-groupimg {
+   margin-top: 15vh;
+   margin-right: 4vh;
+}
+
+.avantage-group {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.avantage-design {
+   width: 308px;
+   height: 192px;
+   display: flex;
+   border-radius: 10px;
+   background: #FFF;
+   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.05);
+   flex-direction: column;
+}
+
+.avantage-design-icons-network {
+   width: 52px;
+   height: 48px;
+   border-radius: 10px;
+   background: #FFDED4;
+   position: relative;
+   margin-top: 2vh;
+   margin-left: 2vh;
+}
+
+.icons-network {
+   background-image: url('img/network-img.png');
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+}
+
+.avantage-design-icons-desktop {
+   width: 52px;
+   height: 48px;
+   border-radius: 10px;
+   background: #FFEED4;
+   position: relative;
+   margin-top: 2vh;
+   margin-left: 2vh;
+}
+
+.icons-desktop {
+   background-image: url('img/desktop-img.png');
+   width: 34px;
+   height: 34px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto; 
+}
+
+.avantage-design-icons-phone {
+   width: 52px;
+   height: 48px;
+   border-radius: 10px;
+   background: #D4F0FF;
+   position: relative;
+   margin-top: 2vh;
+   margin-left: 2vh;
+}
+
+.icons-phone {
+   background-image: url('img/phone-img.png');
+   width: 36px;
+   height: 36px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto; 
+}
+
+.avantage-design-icons-rocket {
+   width: 52px;
+   height: 48px;
+   border-radius: 10px;
+   background: #FFD4D4;
+   position: relative;
+   margin-top: 2vh;
+   margin-left: 2vh;
+}
+
+.icons-rocket {
+   background-image: url('img/rocket-img.png');
+   width: 36px;
+   height: 36px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto; 
+}
+
+.text-website {
+   color: #331B3B;
+   font-family: Hind Vadodara;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 137.3%; /* 21.968px */
+   letter-spacing: 0.88px;
+   text-transform: uppercase;
+   margin-top: 2vh;
+   margin-left: 2vh;
+}
+
+.footer-text {
+   color: rgba(51, 27, 59, 0.66);
+   font-family: Hind Vadodara;
+   font-size: 15px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 145.3%; /* 21.795px */
+   letter-spacing: 0.3px;
+   margin-top: 2vh;
+   margin-left: 2vh;
 }
