@@ -19,10 +19,6 @@
    margin-top: 4vh;
 }
 
- .about {
-
- }
-
  .ellement-1,
  .ellement-2,
  .ellement-3,
@@ -43,7 +39,7 @@
  }
 
  .title {
-
+   margin-right: 17vh;
  }
 
  .title-text {
@@ -104,4 +100,123 @@
    bottom: 0;
    margin: auto;
    transform: rotate(-30deg);
+}
+
+.ln {
+   background-image: url(img/img-in.png);
+   width: 18px;
+   height: 18px;
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   transform: rotate(-30deg);
+}
+
+.in {
+   background-image: url(img/img-inst.png);
+   width: 24px;
+   height: 24px;
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   transform: rotate(-30deg);
+}
+
+.main-button {
+   display: flex;
+   justify-content: space-between;
+}
+
+.business-text {
+   font-family: Hind Vadodara;
+   color: #331B3B;
+}
+
+.text-business-1 {
+   font-size: 87px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 99.8%; /* 86.826px */
+   letter-spacing: -0.87px;
+   margin-top: 18vh;
+   margin-left: 4vh;
+}
+
+.text-business-1 span {
+   font-size: 87px;  
+   font-style: normal;
+   font-weight: 300;
+   line-height: 99.8%;
+   letter-spacing: -0.87px;
+}
+
+.text-business-2 {
+   font-size: 17px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 146.3%; /* 24.871px */
+   letter-spacing: 0.34px;
+   margin-left: 4vh;
+   margin-top: 4vh;
+}
+
+.bussines-button {
+   width: 207px;
+   height: 66px;
+   border-radius: 10px;
+   background: #331B3B;
+   text-align: center;
+   margin-left: 4vh;
+   margin-bottom: 12vh;
+}
+
+.GS {
+   color: #FFF;
+   font-family: Hind Vadodara;
+   font-size: 17px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 137.3%; /* 23.341px */
+   letter-spacing: 0.34px;
+   text-transform: uppercase;
+}
+
+.main-what-business {
+   width: 1387px;
+   height: 589px;
+   background-color: #ECF7FF;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   /* align-items: center; */
+}
+
+.main-what-business {
+  
+}
+
+.what-text {
+   color: #331B3B;
+   text-align: center;
+   font-family: Hind Vadodara;
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 106.3%; /* 51.024px */
+   letter-spacing: -0.48px;
+   margin-bottom: 29vh;
+}
+
+.what-text span {
+   font-weight: 300;
+   line-height: 106.3%;
+   letter-spacing: -0.48px;
 }
