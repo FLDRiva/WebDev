@@ -11,12 +11,15 @@
     margin: 0px 50px;
 }
 
+@media (min-width: 500px) {
+
  .main-header {
    display: flex;
    justify-content: space-between;
    margin-left: 3vw;
    margin-right: 3vw;
    margin-top: 4vh;
+}
 }
 
  .ellement-1,
@@ -499,6 +502,8 @@
    font-weight: 500;
    line-height: 146.3%; 
    border-radius: 100px;
+   text-decoration: none;
+   color: #331B3B;
    border: 1px solid #343434;
    text-align: center;
    width: 92px;
@@ -552,7 +557,6 @@
 
 .testimonials-content {
    display: flex;
-   border: 1px solid #000;
    flex-direction: column;
    justify-content: center;
    width: 448px;
