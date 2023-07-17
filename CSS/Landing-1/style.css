@@ -340,3 +340,59 @@
    margin-top: 2vh;
    margin-left: 2vh;
 }
+
+.about_us {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.aboutUsImg {
+   width: 659.955px;
+   height: 605.923px;
+}
+
+.text-aboutUs {
+   font-family: Hind Vadodara;
+}
+
+.aboutUs-head {
+   color: #331B3B;
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 106.3%; /* 51.024px */
+   letter-spacing: -0.48px;
+}
+
+.aboutUs-head span {
+   font-weight: 300;
+}
+
+.aboutUs-main {
+   color: rgba(51, 27, 59, 0.66);
+   font-size: 17px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 146.3%; /* 24.871px */
+   letter-spacing: 0.34px;
+   margin-top: 2vh;
+}
+
+.about-explore {
+   width: 207px;
+   height: 66px;
+   border-radius: 10px;
+   background: #331B3B;
+   margin-top: 6vh;
+}
+
+.explore-text {
+   font-size: 17px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 137.3%; /* 23.341px */
+   letter-spacing: 0.34px;
+   text-transform: uppercase;
+   color: #FFFFFF;
+}
