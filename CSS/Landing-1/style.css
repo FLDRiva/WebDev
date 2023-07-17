@@ -612,7 +612,7 @@
 
 .main-text,
 .down-text,
-.input-text,
+.mail-text,
 .submit-text {
    color: #FFF;
    font-family: Hind Vadodara;
@@ -637,7 +637,7 @@
    align-items: center;
 }
 
-.input-text {
+.mail-text {
    width: 263px;
    height: 52px;
    border: 1px solid #FFF;
