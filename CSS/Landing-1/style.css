@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;600&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;600&family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
 
  body {
     margin: 0px;
@@ -581,4 +581,122 @@
    font-weight: 600;
    margin-left: 2vh;
    margin-bottom: 2vh;
+}
+
+.footer {
+   display: flex;
+   height: 453px;
+   justify-content: space-around;
+   align-items: center;
+   border-radius: 0px 158px 0px 0px;
+   background: #000;
+   margin-top: 11vh;
+}
+
+.footer-text-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.header-text {
+   color: #FFF;
+   font-family: Playfair Display;
+   font-size: 36px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: 0.36px;
+   margin-bottom: 2vh;
+}
+
+.main-text,
+.down-text,
+.input-text,
+.submit-text {
+   color: #FFF;
+   font-family: Hind Vadodara;
+   font-size: 16px;
+   font-style: normal;
+   line-height: 159.3%;
+   letter-spacing: 0.32px;
+   margin-bottom: 2vh;
+}
+
+.main-text {
+   font-weight: 400;
+}
+
+.down-text {
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+.form-footer {
+   display: flex;
+   align-items: center;
+}
+
+.input-text {
+   width: 263px;
+   height: 52px;
+   border: 1px solid #FFF;
+   background: #000;
+   color: #FFF;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+
+.submit-text {
+   width: 143px;
+   height: 56px;
+   border: 1px solid #FFF;
+   background: #FFF;
+   color: #000;
+   font-style: normal;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+.maps-container {
+   display: flex;
+   width: 484px;
+   height: 300px;
+   background-image: url(img/maps.png);
+}
+
+.cordinates {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 197px;
+   height: 84px;
+   background: #FFF;
+   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+   margin-top: 3vh;
+   margin-left: 3vh;
+}
+
+.us {
+   color: #414141;
+   font-family: Roboto;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 134.8%; 
+   margin-left: 1vh;
+}
+
+.us span {
+   font-weight: 400;
+}
+
+.vlm {
+   color: #51A0DC;
+   font-family: Hind Vadodara;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 159.3%;
+   text-decoration: none;
 }
