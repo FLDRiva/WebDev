@@ -1,0 +1,25 @@
+@media (max-width: 767px) {
+    .main-header {
+        border: 1px solid #000;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        margin-top: 1vh;
+        align-items: center;
+    }
+
+    .social-link {
+        display: none;
+    }
+
+    .title {
+        margin-right: 0;
+    }
+
+    .main-button {
+        flex-direction: column-reverse;
+    }
+
+
+
+
+}

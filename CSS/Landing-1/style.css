@@ -1,25 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;600&family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
 
  body {
-    margin: 0px;
-    min-width: auto;
-    max-height: 4093px;
-    background: #fff;
+   margin: 0px;
+   min-width: auto;
+   background: #fff;
+   width: 100vw;
+   padding: 0;
+   height: auto;
  }
 
 .header {
     margin: 0px 50px;
 }
 
-@media (min-width: 500px) {
-
- .main-header {
+.main-header {
    display: flex;
    justify-content: space-between;
    margin-left: 3vw;
    margin-right: 3vw;
    margin-top: 4vh;
-}
 }
 
  .ellement-1,
