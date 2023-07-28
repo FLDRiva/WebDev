@@ -1,4 +1,9 @@
 @media (max-width: 767px) {
+
+    body {
+        margin-left: 2vw;
+    }
+
     .main-header {
         border: 1px solid #000;
         margin-left: 1vw;
@@ -13,13 +18,70 @@
 
     .title {
         margin-right: 0;
+        font-size: 18px;
+    }
+
+    .about {
+        padding-left: 7vw;
     }
 
     .main-button {
         flex-direction: column-reverse;
     }
 
+    .img-button {
+        width: 460px;
+    }
 
+    .main-what-business {
+        margin-top: 90vw;
+    }
 
+    .bussines-button {
+        margin-left: 10vh;
+    }
 
+    .avantage-group {
+        flex-direction: column;
+    }
+
+    .arrow-groupimg {
+        display: none;  
+    }
+
+    .about_us {
+        flex-direction: column;
+        margin-top: 40vw;
+    }
+
+    .text-aboutUs {
+        margin-top: 25vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutUs-main {
+        margin-left: 4vw;
+    }
+
+    .text-container {
+        flex-direction: column;
+    }
+
+    .work-text-2 {
+        width: 25%;
+        margin-top: 7vw;
+    }
+
+    .recent-work-item {
+        flex-direction: column;
+        margin-top: 8vw;
+    }
+
+    /* .resource-container {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+    } */
 }
