@@ -67,41 +67,4 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
-}
-
-.link {
-  border-bottom: 5px dashed red;
-}
-
-.block {
-  width: 31.25%;
-  background-color: gray;
-  padding: 30px;
-  line-height: 60px;
-}
-.block > p {
-  color: #fff;
-}
-.block .block__text {
-  font-size: 20px;
-}
-.block .block__text span {
-  color: #000;
-}
-
-.link {
-  color: #000;
-  text-decoration: none;
-  font-size: 20px;
-}
-.block .link {
-  font-size: 20px;
-}
-.link:hover {
-  color: green;
-}
-
-.link-2 {
-  font-size: 40px;
-  color: red;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=nullstyle.css.map */
