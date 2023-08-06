@@ -49,4 +49,53 @@ body {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.main_1 {
+  margin-left: 2vh;
+  margin-right: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main_1 .main_1_sauce_1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main_1 .main_1_sauce_1 .run-string {
+  padding: 2vh 0;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main_1 .main_1_sauce_1 .run-string span {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 152.471%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.main_1 .main_1_sauce_2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main_1 .main_1_sauce_2 span {
+  margin-top: 2vh;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 111.228%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

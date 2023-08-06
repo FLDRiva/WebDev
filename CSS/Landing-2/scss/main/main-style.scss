@@ -1,0 +1,46 @@
+@mixin displblock ($orintation_1, $orintation_2, $orintation_3) {
+    display: $orintation_1;
+    flex-direction: $orintation_2;
+    justify-content: $orintation_3;
+}
+
+.main_1 {
+    margin-left: 2vh;
+    margin-right: 2vh;
+    .main_1_sauce_1 {
+        .run-string {
+            padding: 2vh 0;
+            align-items: center;
+                span {
+                color: #000;
+                text-align: center;
+                font-family: Roboto;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 152.471%;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                }
+            @include displblock(flex,row,space-between)
+        }
+        @include displblock(flex,column,space-between)         
+    }
+    .main_1_sauce_2 {
+        align-items: center;
+        span {
+            margin-top: 2vh;
+            color: #000;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 58px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 111.228%;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        @include displblock(flex,column,space-between)    
+    }
+    @include displblock(flex,row,space-between)
+}
