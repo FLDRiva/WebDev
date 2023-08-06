@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.navigation {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #222;
+  border: 1px solid #000;
+  line-height: 154.286%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-left: 2vh;
+  margin-right: 2vh;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation .header-img-block {
+  align-items: center;
+  gap: 3vh;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation .header-img-block .rectangle-red,
+.navigation .header-img-block .rectange-blue {
+  width: 17px;
+  height: 17px;
+}
+.navigation button {
+  background-color: #FB4B4D;
+  width: 157px;
+  height: 52px;
+  border: none;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+.navigation button a {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.6px; /* 154.286% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}/*# sourceMappingURL=head-style.css.map */
