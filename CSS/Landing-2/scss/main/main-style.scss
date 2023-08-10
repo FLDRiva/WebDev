@@ -4,43 +4,72 @@
     justify-content: $orintation_3;
 }
 
+%textdisign {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 .main_1 {
     margin-left: 2vh;
     margin-right: 2vh;
+    align-items: flex-start;
     .main_1_sauce_1 {
+        border-right: 1px solid #000;
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000;
         .run-string {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
             padding: 2vh 0;
             align-items: center;
                 span {
-                color: #000;
-                text-align: center;
-                font-family: Roboto;
                 font-size: 17px;
-                font-style: normal;
-                font-weight: 400;
                 line-height: 152.471%;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
+                @extend %textdisign;
                 }
             @include displblock(flex,row,space-between)
         }
         @include displblock(flex,column,space-between)         
     }
+    .vertical-line {
+        height: 105vh;
+        border-left: 1px solid #000;
+        margin-right: 11vh;
+    }
     .main_1_sauce_2 {
-        align-items: center;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        .imgVector-2 {
+            border-top: 1px solid #000;
+            height: 79vh;
+        }
         span {
-            margin-top: 2vh;
-            color: #000;
-            text-align: center;
-            font-family: Roboto;
+            margin-top: 1.5vh;
             font-size: 58px;
-            font-style: normal;
-            font-weight: 400;
             line-height: 111.228%;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            @extend %textdisign;
         }
         @include displblock(flex,column,space-between)    
+    }
+    @include displblock(flex,row,space-between)
+}
+
+.scorp {
+    margin-top: 2vh;
+    padding: 6vh 0;
+    align-items: center;
+    border: 1px solid #000;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    span {
+        font-size: 65px;
+        line-height: 111.655%;
+        @extend %textdisign;
     }
     @include displblock(flex,row,space-between)
 }

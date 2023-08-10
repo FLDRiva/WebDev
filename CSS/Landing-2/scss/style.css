@@ -5,6 +5,7 @@ body {
 }
 
 .navigation {
+  padding: 2vh 0;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -51,19 +52,35 @@ body {
   text-decoration: none;
 }
 
+.scorp span, .main_1 .main_1_sauce_2 span, .main_1 .main_1_sauce_1 .run-string span {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 .main_1 {
   margin-left: 2vh;
   margin-right: 2vh;
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .main_1 .main_1_sauce_1 {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .main_1 .main_1_sauce_1 .run-string {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   padding: 2vh 0;
   align-items: center;
   display: flex;
@@ -71,31 +88,43 @@ body {
   justify-content: space-between;
 }
 .main_1 .main_1_sauce_1 .run-string span {
-  color: #000;
-  text-align: center;
-  font-family: Roboto;
   font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 152.471%;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+}
+.main_1 .vertical-line {
+  height: 105vh;
+  border-left: 1px solid #000;
+  margin-right: 11vh;
 }
 .main_1 .main_1_sauce_2 {
-  align-items: center;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.main_1 .main_1_sauce_2 .imgVector-2 {
+  border-top: 1px solid #000;
+  height: 79vh;
+}
 .main_1 .main_1_sauce_2 span {
-  margin-top: 2vh;
-  color: #000;
-  text-align: center;
-  font-family: Roboto;
+  margin-top: 1.5vh;
   font-size: 58px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 111.228%;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+}
+
+.scorp {
+  margin-top: 2vh;
+  padding: 6vh 0;
+  align-items: center;
+  border: 1px solid #000;
+  margin-left: 2vh;
+  margin-right: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.scorp span {
+  font-size: 65px;
+  line-height: 111.655%;
 }/*# sourceMappingURL=style.css.map */
