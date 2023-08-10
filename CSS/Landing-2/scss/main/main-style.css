@@ -1,4 +1,4 @@
-.scorp span, .main_1 .main_1_sauce_2 span, .main_1 .main_1_sauce_1 .run-string span {
+.hot-string span, .scorp span, .main_1 .main_1_sauce_2 span, .main_1 .main_1_sauce_1 .run-string span {
   color: #000;
   text-align: center;
   font-family: Roboto;
@@ -73,4 +73,40 @@
 .scorp span {
   font-size: 65px;
   line-height: 111.655%;
+}
+
+.main_2 {
+  align-items: center;
+  margin-left: 2vh;
+  margin-right: 2vh;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main_2 .fire_2 {
+  margin-bottom: 55vh;
+  margin-top: 2vh;
+  height: 8vh;
+}
+.main_2 .cupol {
+  margin-left: 2vh;
+  margin-right: 2vh;
+  margin-bottom: 2vh;
+}
+
+.hot-string {
+  border: 1px solid #000;
+  margin-left: 2vh;
+  margin-right: 2vh;
+  padding: 2vh 0;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hot-string span {
+  font-size: 17px;
+  line-height: 152.471%;
 }/*# sourceMappingURL=main-style.css.map */

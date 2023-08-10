@@ -73,3 +73,36 @@
     }
     @include displblock(flex,row,space-between)
 }
+
+.main_2 {
+    align-items: center;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    .fire_2 {
+        margin-bottom: 55vh;
+        margin-top: 2vh;
+        height: 8vh;
+    }
+    .cupol {
+        margin-left: 2vh;
+        margin-right: 2vh;
+        margin-bottom: 2vh;
+    }
+    @include displblock(flex,row,space-between)
+}
+
+.hot-string {
+    border: 1px solid #000;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    padding: 2vh 0;
+    align-items: center;
+    span {
+        font-size: 17px;
+        line-height: 152.471%;
+        @extend %textdisign
+    }
+    @include displblock(flex,row,space-between)
+}
