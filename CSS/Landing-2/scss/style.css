@@ -21,6 +21,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.navigation a {
+  text-decoration: none;
+  color: #222;
+}
 .navigation .header-img-block {
   align-items: center;
   gap: 3vh;
@@ -52,7 +56,7 @@ body {
   text-decoration: none;
 }
 
-.hot-string span, .scorp span, .main_1 .main_1_sauce_2 span, .main_1 .main_1_sauce_1 .run-string span {
+footer section .footer-info-text, .hot-string span, .scorp span, .main_1 .main_1_sauce_2 span, .main_1 .main_1_sauce_1 .run-string span {
   color: #000;
   text-align: center;
   font-family: Roboto;
@@ -163,4 +167,53 @@ body {
 .hot-string span {
   font-size: 17px;
   line-height: 152.471%;
+}
+
+footer .souce-footer {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+footer section .footer-info-text {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+footer section .footer-info-text, .main_1 .main_1_sauce_1 .run-string span, .main_1 .main_1_sauce_2 span, .scorp span, .hot-string span {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+footer {
+  margin-left: 2vh;
+  margin-right: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .souce-footer {
+  padding: 2vh;
+}
+footer section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer section .footer-info-text {
+  font-size: 58px;
+  line-height: 111.228%;
+  gap: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer section .screen {
+  height: 75vh;
+  border: 1px solid #000;
 }/*# sourceMappingURL=style.css.map */

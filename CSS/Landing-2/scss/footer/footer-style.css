@@ -1,0 +1,48 @@
+footer .souce-footer {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+footer section .footer-info-text {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+footer section .footer-info-text {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+footer {
+  margin-left: 2vh;
+  margin-right: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .souce-footer {
+  padding: 2vh;
+}
+footer section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer section .footer-info-text {
+  font-size: 58px;
+  line-height: 111.228%;
+  gap: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer section .screen {
+  height: 75vh;
+  border: 1px solid #000;
+}/*# sourceMappingURL=footer-style.css.map */

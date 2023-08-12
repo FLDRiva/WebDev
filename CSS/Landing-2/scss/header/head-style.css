@@ -16,6 +16,10 @@
   display: flex;
   justify-content: space-between;
 }
+.navigation a {
+  text-decoration: none;
+  color: #222;
+}
 .navigation .header-img-block {
   align-items: center;
   gap: 3vh;

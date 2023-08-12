@@ -1,0 +1,51 @@
+@mixin displblock ($orintation_1, $orintation_2, $orintation_3) {
+    display: $orintation_1;
+    flex-direction: $orintation_2;
+    justify-content: $orintation_3;
+}
+
+%borderThreePosition {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+%borderTwoPositionLR {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+%textdisign {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+footer {
+    margin-left: 2vh;
+    margin-right: 2vh;
+    .souce-footer {
+        padding: 2vh;
+        @extend %borderThreePosition;
+    }
+    section {
+        .footer-info-text {
+            font-size: 58px;
+            line-height: 111.228%;
+            gap: 1;
+            @include displblock(flex, column, space-between);
+            @extend %textdisign;
+            @extend %borderTwoPositionLR  
+        }
+        .screen {
+            height: 75vh;
+            border: 1px solid #000;
+        }
+        @include displblock(flex, row, space-between);
+    }
+    @include displblock(flex, column, center);
+}
