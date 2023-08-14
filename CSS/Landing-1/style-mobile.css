@@ -5,7 +5,6 @@
     }
 
     .main-header {
-        border: 1px solid #000;
         margin-left: 1vw;
         margin-right: 1vw;
         margin-top: 1vh;
@@ -16,13 +15,24 @@
         display: none;
     }
 
+    .about {
+        flex: 5;
+        order: 1;
+    }
+
     .title {
         margin-right: 0;
         font-size: 18px;
+        flex: 6;
+        order: 0;
     }
 
-    .about {
-        padding-left: 7vw;
+    .text-business-1 {
+        font-size: 63px;
+    }
+
+    .text-business-1 span {
+        font-size: 63px;
     }
 
     .main-button {
@@ -30,19 +40,36 @@
     }
 
     .img-button {
-        width: 460px;
-    }
-
-    .main-what-business {
-        margin-top: 90vw;
+        width: 91%;
+        padding: 1vh;
     }
 
     .bussines-button {
         margin-left: 10vh;
     }
 
-    .avantage-group {
-        flex-direction: column;
+    .avantage-design {
+        padding: 1vh;
+        width: 13vh;
+        height: 25vh;
+    }
+
+    .icons-desktop,
+    .icons-network,
+    .icons-phone,
+    .icons-rocket {
+        width: 5vw;
+        background-repeat: no-repeat;
+    }
+
+    .text-website {
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .footer-text {
+        font-size: 10px;
+        margin-top: 1vh;
     }
 
     .arrow-groupimg {
@@ -51,37 +78,106 @@
 
     .about_us {
         flex-direction: column;
-        margin-top: 40vw;
+    }
+
+    .people_img {
+        width: 105%;
     }
 
     .text-aboutUs {
-        margin-top: 25vw;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    .aboutUs-head {
+        font-size: 39px;
+        text-align: center;
+        padding: 4vh 0 0 0;
+    }
+
     .aboutUs-main {
-        margin-left: 4vw;
+        padding: 2vh;
     }
 
     .text-container {
         flex-direction: column;
+        margin: 0;
+        width: auto;
     }
 
     .work-text-2 {
-        width: 25%;
+        width: 83%;
         margin-top: 7vw;
+    }
+
+    .recent-work {
+        margin-top: 10vh;
     }
 
     .recent-work-item {
         flex-direction: column;
-        margin-top: 8vw;
+        margin-top: 5vh;
+        gap: 2vh;
     }
 
-    /* .resource-container {
-        width: 0;
-        height: 0;
+    .resource-arrow {
+        display: block;
+    }
+
+    .resource-container {
+        margin: 0;
+    }
+    
+    .text-testimonials {
+        margin: 0;
+    }
+
+    .testimonials-conteiner {
+        margin-top: 12vh;
+        font-size: 12px;
+    }
+
+    .text-block-testimonials,
+    .testimonials-content {
+        margin: 0;
+    }
+
+    .quotes-img {
         margin-left: 0;
-    } */
+    }
+
+    .soup {
+        margin-left: 1vh;
+        margin-top: 5vh;
+    }
+
+    .footer {
+        margin-top: 8vh;
+        flex-direction: column;
+    }
+
+    .footer-text-container {
+        padding: 1vh 0 0 3vh;
+    }
+
+    .header-text {
+        font-size: 26px;
+    }
+
+    .main-text {
+        font-size: 10px;
+    }
+
+    .down-text {
+        font-size: 17px;
+    }
+
+    .form-footer {
+        width: 30%;
+    }
+
+    .maps-container { 
+        width: 94%;
+    }
 }

@@ -22,6 +22,14 @@
    margin-top: 4vh;
 }
 
+.img-button {
+   width: 100%;
+}
+
+.bussines-img {
+   flex: 13;
+}
+
  .ellement-1,
  .ellement-2,
  .ellement-3,
@@ -134,6 +142,7 @@
 .business-text {
    font-family: Hind Vadodara;
    color: #331B3B;
+   flex: 14;
 }
 
 .text-business-1 {
@@ -186,7 +195,7 @@
 }
 
 .main-what-business {
-   height: 589px;
+   min-height: 589px;
    background-color: #ECF7FF;
    border-radius: 0px 400px 0px 0px;
    display: flex;
@@ -217,19 +226,21 @@
 }
 
 .avantage-group {
+   gap: 3vw;
    display: flex;
    justify-content: space-around;
    align-items: center;
 }
 
 .avantage-design {
-   width: 308px;
-   height: 192px;
+   /* width: 17vw;
+   height: 192px; */
    display: flex;
    border-radius: 10px;
    background: #FFF;
    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.05);
    flex-direction: column;
+   padding: 2vh;
 }
 
 .avantage-design-icons-network {
@@ -239,19 +250,14 @@
    background: #FFDED4;
    position: relative;
    margin-top: 2vh;
-   margin-left: 2vh;
+   /* margin-left: 2vh; */
 }
 
 .icons-network {
    background-image: url('img/network-img.png');
    width: 30px;
    height: 30px;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   margin: auto;
+   background-size: contain;
 }
 
 .avantage-design-icons-desktop {
@@ -261,19 +267,14 @@
    background: #FFEED4;
    position: relative;
    margin-top: 2vh;
-   margin-left: 2vh;
+   /* margin-left: 2vh; */
 }
 
 .icons-desktop {
    background-image: url('img/desktop-img.png');
    width: 34px;
    height: 34px;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   margin: auto; 
+   background-size: contain;
 }
 
 .avantage-design-icons-phone {
@@ -283,19 +284,14 @@
    background: #D4F0FF;
    position: relative;
    margin-top: 2vh;
-   margin-left: 2vh;
+   /* margin-left: 2vh; */
 }
 
 .icons-phone {
    background-image: url('img/phone-img.png');
    width: 36px;
    height: 36px;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   margin: auto; 
+   background-size: contain;
 }
 
 .avantage-design-icons-rocket {
@@ -312,12 +308,7 @@
    background-image: url('img/rocket-img.png');
    width: 36px;
    height: 36px;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   margin: auto; 
+   background-size: contain;
 }
 
 .text-website {
@@ -330,7 +321,7 @@
    letter-spacing: 0.88px;
    text-transform: uppercase;
    margin-top: 2vh;
-   margin-left: 2vh;
+   /* margin-left: 2vh; */
 }
 
 .footer-text {
@@ -342,7 +333,7 @@
    line-height: 145.3%; 
    letter-spacing: 0.3px;
    margin-top: 2vh;
-   margin-left: 2vh;
+   /* margin-left: 2vh; */
 }
 
 .about_us {
@@ -351,10 +342,6 @@
    align-items: center;
 }
 
-.aboutUsImg {
-   width: 659.955px;
-   height: 605.923px;
-}
 
 .text-aboutUs {
    font-family: Hind Vadodara;
@@ -415,7 +402,7 @@
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   width: 1400px;
+   width: 168vh;
    align-items: center;
    margin-top: 5vh;
 }
@@ -520,7 +507,7 @@
 
 .resource-arrow {
    display: flex;
-   width: 1487px;
+   width: 174vh;
    margin-top: 3vh;
 }
 

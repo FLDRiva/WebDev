@@ -1,0 +1,30 @@
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+    .avantage-design {
+        padding: 2vh;
+        height: 172px
+    }
+    .icons-network {
+        width: 25px;
+        height: 25px;
+    }
+    .icons-desktop {
+        width: 25px;
+        height: 25px;
+    }
+    .icons-phone {
+        width: 25px;
+        height: 25px;
+    }
+    .icons-rocket {
+        width: 25px;
+        height: 25px;
+    }
+    .text-website {
+        font-size: 14px;
+        /* margin-top: 1vh; */
+    }
+    .footer-text {
+        font-size: 14px;
+        /* margin-top: 1vh; */
+    }
+}
