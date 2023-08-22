@@ -18,6 +18,7 @@ var Typescript = /** @class */ (function () {
         this.version = version;
     }
     Typescript.prototype.info = function (name) {
+        // name + 'Typescript version is ' + this.version
         return "[".concat(name, "]: Typescript version is ").concat(this.version);
     };
     return Typescript;
@@ -45,18 +46,38 @@ var Animal = /** @class */ (function () {
     Animal.prototype.go = function () {
         console.log('GO');
     };
-    return Animal;
-}());
-var Cat = /** @class */ (function (_super) {
-    __extends(Cat, _super);
-    function Cat() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Cat.prototype.setVoice = function (voice) {
+    Animal.prototype.setVoice = function (voice) {
         this.voice = voice;
     };
-    return Cat;
-}(Animal));
-var cat = new Cat();
-cat.setVoice('test');
-console.log(cat.color);
+    return Animal;
+}());
+// class Cat extends Animal {
+//     public setVoice(voice: string): void {
+//         this.voice = voice
+//     }
+// }
+// const cat = new Cat()
+var animal = new Animal();
+// cat.setVoice('test')
+console.log(animal.color);
+// console.log(cat.color)
+// console.log(cat.voice)
+//----------------------------------------------
+var Component = /** @class */ (function () {
+    function Component() {
+    }
+    return Component;
+}());
+var appComponent = /** @class */ (function (_super) {
+    __extends(appComponent, _super);
+    function appComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    appComponent.prototype.render = function () {
+        console.log('Component on render');
+    };
+    appComponent.prototype.info = function () {
+        return 'This is info';
+    };
+    return appComponent;
+}(Component));

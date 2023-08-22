@@ -5,6 +5,7 @@ class Typescript {
     }
 
     info(name: string) {
+        // name + 'Typescript version is ' + this.version
         return `[${name}]: Typescript version is ${this.version}`
     }
 }
@@ -32,6 +33,12 @@ class Animal {
     private go() {
         console.log('GO');   
     }
+
+    private test: string = '';
+
+    setTest(voice: string) {
+        this.test = voice;
+    }
 }
 
 class Cat extends Animal {
@@ -41,8 +48,11 @@ class Cat extends Animal {
 }
 
 const cat = new Cat()
-cat.setVoice('test')
-console.log(cat.color)
+const animal = new Animal()
+// cat.setVoice('test')
+console.log(animal.color)
+// console.log(cat.color)
+// console.log(cat.voice)
 
 //----------------------------------------------
 
