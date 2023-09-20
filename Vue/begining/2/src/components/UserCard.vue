@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="user-card">
+    <!-- <div class="user-card">
       <h1>Научу зарабатывать от 50 000р. в час</h1>
       <div class="main-information flex">
         <img src="../assets/images/коуч.jpg" width="500px">
@@ -38,57 +38,63 @@
         След.
       </button>
       <p>Страница {{ currentPage }} из {{ pages }}</p>
-    </div>
+    </div> -->
+    <DzCard />
   </div>
 </template>
 
 <script>
+import DzCard from '@/components/DzCard.vue'
 export default {
-  data() {
-    return {
-      firstName: 'Игнатий',
-      secondName: 'Иларионович',
-      lastName: 'Богатов',
-      users: [
-        {
-          firstName: 'Ivan',
-          secondName: 'Ivanovich',
-          lastName: 'Ivanov'
-        },
-        {
-          firstName: 'Ivan',
-          secondName: 'Ivanovich',
-          lastName: 'Ivanov'
-        },
-        {
-          firstName: 'Ivan',
-          secondName: 'Ivanovich',
-          lastName: 'Ivanov'
-        },
-      ],
-      pages: 3,
-      currentPage: 1
-    }
-  },
-  computed: {
-    getAuthorFullName() {
-      return `${this.firstName} ${this.secondName} ${this.lastName}`.toUpperCase()
-    }
-  },
-  methods: {
-    getFullName(user) {
-      return `${user.firstName} ${user.secondName} ${user.lastName}`
+    data() {
+        return {
+            firstName: 'Игнатий',
+            secondName: 'Иларионович',
+            lastName: 'Богатов',
+            users: [
+                {
+                    firstName: 'Ivan',
+                    secondName: 'Ivanovich',
+                    lastName: 'Ivanov'
+                },
+                {
+                    firstName: 'Ivan',
+                    secondName: 'Ivanovich',
+                    lastName: 'Ivanov'
+                },
+                {
+                    firstName: 'Ivan',
+                    secondName: 'Ivanovich',
+                    lastName: 'Ivanov'
+                },
+            ],
+            pages: 3,
+            currentPage: 1
+        };
     },
-    loadUsers(page) {
-      console.log(`Загрузка пользователей страница: ${page}`);
-    }
-  },
-  // Следит за изменениями наших функций
-  watch: {
-    currentPage(page) {
-      this.loadUsers(page)
-    }
-  }
+    comments: {
+        DzCard,
+    },
+    computed: {
+        getAuthorFullName() {
+            return `${this.firstName} ${this.secondName} ${this.lastName}`.toUpperCase();
+        }
+    },
+    methods: {
+        getFullName(user) {
+            return `${user.firstName} ${user.secondName} ${user.lastName}`;
+        },
+        loadUsers(page) {
+            console.log(`Загрузка пользователей страница: ${page}`);
+        }
+    },
+    // Следит за изменениями наших функций
+    watch: {
+        currentPage(page) {
+            this.loadUsers(page);
+        }
+    },
+    components: { DzCard }
 }
 
 </script>
