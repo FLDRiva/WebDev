@@ -12,24 +12,21 @@ $f: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    background-color: #232323;
-    border: 1px solid #6b6565;;
-    border-radius: 8px;
-    box-shadow: 5px 6px 5px -4px rgba(235, 240, 244, 0.48);
+    background-color: #e3d7d7;
+    border: 1px solid #80808047;;
+    border-radius: 4%;
+    box-shadow: 5px 6px 5px -4px rgba(5, 5, 5, 0.48);
     transition: all .4s ease-in-out;
-    width: 100%;
+    width: 450px;
     input {
       flex-grow: 2;
       width: 90%;
       outline: none;
       border: none;
-      background-color: #232323!important;
-      font-family: 'Bebas Neue', sans-serif;
+      background-color: #e3d7d7;
+      font-family: 'Roboto Mono', monospace;
       font-weight: 400;
-      font-size: 1.6rem;
-      line-height: 1.1875;
-      letter-spacing: -.01em;
-      color: var(--text-color);
+      font-size: 16px;
     }
   }
 }

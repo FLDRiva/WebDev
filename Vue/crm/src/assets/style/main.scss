@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@300;400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@300;400;500;800&display=swap');
 
 *,
 *::before,
@@ -38,10 +38,11 @@ select {
 }
 
 body {
-  padding-bottom: 30px;
-  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
   min-height: 100vh;
-  background-image: url(../images/darth_stripe.png);
+  background-image: url(../images/white_bg.png);
   
 }
 

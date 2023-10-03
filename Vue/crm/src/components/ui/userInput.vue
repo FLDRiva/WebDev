@@ -4,7 +4,13 @@
     <div class="login-input">
     <img width="18" height="19" view-box="0 0 18 19" fill="none" src="https://img.icons8.com/fluency-systems-filled/48/737373/user-credentials.png" alt="user-credentials">
       
-    <input type="text" :placeholder="placeholder">
+    <input 
+      type="text" 
+      v-model="writeLogin"
+      maxlength="40"
+      minlength="1"
+      :placeholder="placeholder"
+    >
     </div>
   </div>
   
@@ -13,13 +19,25 @@
 
 <script>
 export default {
+  data() {
+    return {
+      writeLogin: ''
+    }
+  },
   props: {
     label: {
       type: String,
       default: ''
     },
-    type: String,
-    placeholder: String,
+    placeholder: {
+      type: String,
+      default: '',
+      required: true
+    },
+    model: {
+      prop: 'value',
+      events: 'change'
+    },
   }
 }
 </script>

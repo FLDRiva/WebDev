@@ -1,83 +1,46 @@
 <template>
   <div id="app">
     <div class="container">
-      <h2 class="h2-name">   
-      </h2>
-      <userInput 
-        :placeholder="UsInputLog.placeholder"
-      />
-      <userInput 
-        :placeholder="UsInputPass.placeholder"
-      />
-      <SaveMe />
-      <LoginBtn :labelButton="'Войти'"/>
-      <div class="reg-pass">
-        <signIn />
-        <RessetPass />
-      </div>
+      <LoadingPage />
     </div> 
   </div>
 </template>
 
 <script>
-import userInput from '../src/components/ui/userInput'
-import SaveMe from '../src/components/ui/SaveMe.vue'
-import LoginBtn from '../src/components/ui/LoginBtn.vue'
-import signIn from '../src/components/ui/signIn.vue'
-import RessetPass from '../src/components/ui/ResetPass.vue'
+import LoadingPage from '../src/views/LoadingPage.vue'
 export default {
   name: 'App',
   components: {
-    userInput,
-    SaveMe,
-    LoginBtn,
-    signIn,
-    RessetPass,
+    LoadingPage,
   },
-  data() {
-    return {
-      UsInputLog: {
-        placeholder: "Логин"
-      },
-      UsInputPass: {
-        placeholder: "Пароль"
-      }
-    }
-  }
+
 }
 </script>
 
 <style lang="scss" scoped>
 #app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
   
   .container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
-    min-width: 39vw;
-    min-height: 50vh;
-    margin-top: 20vh;
-    margin-bottom: 1vh;
-    background-image: url(../src/assets/images/irongrip.png);
-    box-shadow: 23px 21px 16px -11px rgba(244, 250, 255, 0.4);
-    border: 2px solid grey;
+    align-self: center;
+    width: 500px;
+    min-height: auto;
+    background-color: #eeeeee;
+    box-shadow: 8px 10px 12px 0px rgba(3, 5, 7, 0.2);
+    border: 2px solid #80808047;
     border-radius: 4%;
     .reg-pass {
       display: flex;
       flex-direction: row;
       gap: 2vw;
-      font-size: 1.3em;
+      font-size: 16px;
       margin: 3vh 1vw 1vh 1vw;
-      font-family: 'Roboto Slab';
-    }
-    .h2-name {
-      margin-top: 1vh;
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 400;
     }
   }
 }
