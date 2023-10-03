@@ -7,13 +7,15 @@ $f: flex;
   gap: 10px;
   .login-input {
     padding: 15px;
+    margin-top: 2vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     background-color: #232323;
-    border: 1px solid transparent;
+    border: 1px solid #6b6565;;
     border-radius: 8px;
+    box-shadow: 5px 6px 5px -4px rgba(235, 240, 244, 0.48);
     transition: all .4s ease-in-out;
     width: 100%;
     input {

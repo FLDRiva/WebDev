@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-      <h2 class="h2-name">
-        <!-- <img src="../src/assets/images/icons_name.png" > -->
-        MixProCRM
+      <h2 class="h2-name">   
       </h2>
       <userInput 
         :placeholder="UsInputLog.placeholder"
