@@ -1,14 +1,21 @@
 <template>
   <div class="login-btn">
     <button>
-      Войти
+      {{ labelButton }}
     </button>
   </div>
 </template>
 
 
 <script>
-
+export default {
+  props: {
+    labelButton: {
+      type: String,
+      default: '12'
+    }
+  }
+}
 
 </script>
 

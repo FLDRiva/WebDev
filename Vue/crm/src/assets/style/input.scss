@@ -1,0 +1,33 @@
+$f: flex;
+
+
+.container-input {
+  display: $f;
+  flex-direction: column;
+  gap: 10px;
+  .login-input {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #232323;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: all .4s ease-in-out;
+    width: 100%;
+    input {
+      flex-grow: 2;
+      width: 90%;
+      outline: none;
+      border: none;
+      background-color: #232323!important;
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.1875;
+      letter-spacing: -.01em;
+      color: var(--text-color);
+    }
+  }
+}

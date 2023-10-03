@@ -1,35 +1,50 @@
 <template>
   <div id="app">
     <div class="container">
-      <h2 class="h2-name">MixProCRM</h2>
-      <LoginInput />
-      <PassInput />
+      <h2 class="h2-name">
+        <!-- <img src="../src/assets/images/icons_name.png" > -->
+        MixProCRM
+      </h2>
+      <userInput 
+        :placeholder="UsInputLog.placeholder"
+      />
+      <userInput 
+        :placeholder="UsInputPass.placeholder"
+      />
       <SaveMe />
-      <LoginBtn />
+      <LoginBtn :labelButton="'Войти'"/>
       <div class="reg-pass">
-        <ByReg />
+        <signIn />
         <RessetPass />
       </div>
-    </div>
+    </div> 
   </div>
 </template>
 
 <script>
-import LoginInput from '@/components/LoginInput.vue'
-import PassInput from '@/components/PassInput.vue'
-import SaveMe from '@/components/SaveMe.vue'
-import LoginBtn from '@/components/LoginBtn.vue'
-import ByReg from '@/components/ByReg.vue'
-import RessetPass from '@/components/ResetPass.vue'
+import userInput from '../src/components/ui/userInput'
+import SaveMe from '../src/components/ui/SaveMe.vue'
+import LoginBtn from '../src/components/ui/LoginBtn.vue'
+import signIn from '../src/components/ui/signIn.vue'
+import RessetPass from '../src/components/ui/ResetPass.vue'
 export default {
   name: 'App',
   components: {
-    LoginInput,
-    PassInput,
+    userInput,
     SaveMe,
     LoginBtn,
-    ByReg,
+    signIn,
     RessetPass,
+  },
+  data() {
+    return {
+      UsInputLog: {
+        placeholder: "Логин"
+      },
+      UsInputPass: {
+        placeholder: "Пароль"
+      }
+    }
   }
 }
 </script>
@@ -50,9 +65,10 @@ export default {
     min-height: 50vh;
     margin-top: 20vh;
     margin-bottom: 1vh;
-    background-image: url(../src/assets/images/backgr_form.jpg);
-    background-repeat: no-repeat;
-    box-shadow: 29px 29px 12px -14px rgba(0, 0, 0, 0.31);
+    background-image: url(../src/assets/images/irongrip.png);
+    box-shadow: 23px 21px 16px -11px rgba(244, 250, 255, 0.4);
+    border: 2px solid grey;
+    border-radius: 4%;
     .reg-pass {
       display: flex;
       flex-direction: row;
@@ -62,10 +78,8 @@ export default {
       font-family: 'Roboto Slab';
     }
     .h2-name {
-      margin-top: 2vh;
-      font-family: 'Roboto Slab';
-      font-weight: 600;
-      font-size: 2em;
+      margin-top: 1vh;
+      font-family: 'Bebas Neue', sans-serif;
     }
   }
 }
