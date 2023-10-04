@@ -7,7 +7,7 @@
         name=""
       >
     </div>
-    <span>Запомнить меня</span>
+    <span>Remember me</span>
   </div>
 
 </template>

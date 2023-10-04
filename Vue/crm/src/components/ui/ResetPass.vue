@@ -1,6 +1,6 @@
 <template>
   <div class="be-reg">
-    <span>Восстановить пароль</span>
+    <span>Reset password</span>
   </div>
 </template>
 

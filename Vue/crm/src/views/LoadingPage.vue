@@ -39,7 +39,7 @@ export default {
     .reg-pass {
       display: flex;
       flex-direction: row;
-      gap: 2vw;
+      gap: 10vw;
       font-size: 16px;
       margin: 3vh 1vw 1vh 1vw;
       font-family: 'Roboto Mono', monospace;

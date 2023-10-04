@@ -1,6 +1,6 @@
 <template>
   <div class="be-reg">
-    <span>Зарегистрироваться</span>
+    <span>Sign up</span>
   </div>
 </template>
 

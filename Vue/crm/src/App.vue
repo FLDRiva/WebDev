@@ -31,7 +31,7 @@ export default {
     min-height: auto;
     background-color: #eeeeee;
     box-shadow: 8px 10px 12px 0px rgba(3, 5, 7, 0.2);
-    border: 2px solid #80808047;
+    border: 1px solid #80808047;
     border-radius: 4%;
     .reg-pass {
       display: flex;
