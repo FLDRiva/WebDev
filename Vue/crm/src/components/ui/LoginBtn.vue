@@ -22,14 +22,14 @@ export default {
 
 <style lang="scss" scoped>
   button {
-    background: #e3d7d7;
+    background: #e5e5e5;
     outline: none;
     min-width: 209px;
     height: 43px;
     border-radius: 5%;
     margin-top: 2vh;
     font-size: 16px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     color: #7d7a7a;
     border: 2px solid #80808047;
@@ -37,7 +37,7 @@ export default {
     &:hover {
       border: 2px solid #9b9292;
       border-color: #9b9292;
-      background-color: #9b9292;
+      background-color: #4b4545;
     }
   }
 

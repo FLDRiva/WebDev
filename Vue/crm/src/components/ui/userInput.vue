@@ -4,13 +4,13 @@
     <div class="login-input">
     <img width="18" height="19" view-box="0 0 18 19" fill="none" src="https://img.icons8.com/fluency-systems-filled/48/737373/user-credentials.png" alt="user-credentials">
       
-    <input 
-      type="text" 
+    <input
       v-model="writeLogin"
       maxlength="40"
       minlength="1"
       :placeholder="placeholder"
     >
+    <!-- <p>{{ writeLogin }}</p> -->
     </div>
   </div>
   
@@ -21,7 +21,12 @@
 export default {
   data() {
     return {
-      writeLogin: ''
+      writeLogin: '',
+    }
+  },
+  methods: {
+    handLeInput () {
+      this.$emit('input', this.content)
     }
   },
   props: {
@@ -33,10 +38,6 @@ export default {
       type: String,
       default: '',
       required: true
-    },
-    model: {
-      prop: 'value',
-      events: 'change'
     },
   }
 }

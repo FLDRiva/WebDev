@@ -16,5 +16,14 @@ export default new Router({
       path: '/login',
       component: LoadingPage
     },
+    {
+      path: '/signup',
+      component: () => import('../src/views/SignUp')
+    },
+    {
+      path: '/reset',
+      component: () => import('../src/views/ResetPage')
+    }
+
   ]
 }) 

@@ -1,6 +1,8 @@
 <template>
   <div class="be-reg">
-    <span>Reset password</span>
+    <router-link to="/reset">
+      <span>Reset password</span>
+    </router-link>
   </div>
 </template>
 
@@ -12,6 +14,14 @@
 
 
 <style lang="scss" scoped>
-
+  .be-reg {
+    a {
+      text-decoration: none;
+      color: #7d7a7a;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
 </style>

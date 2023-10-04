@@ -27,7 +27,7 @@ a {
   align-items: center;
   align-self: center;
   span {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     font-size: 20px;
   }

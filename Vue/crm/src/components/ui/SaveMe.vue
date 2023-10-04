@@ -1,7 +1,8 @@
 <template>
   <div class="check-container">
     <div class="check-box">
-      <input 
+      <input
+        v-model="saveCheck" 
         type="checkbox"
         role="switch"
         name=""
@@ -14,8 +15,13 @@
 
 
 <script>
-
-
+export default {
+  data() {
+    return {
+      saveCheck: false,
+    }
+  }
+}
 </script>
 
 

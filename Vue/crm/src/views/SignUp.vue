@@ -1,0 +1,56 @@
+<template>
+  <div class="container">
+    <form>
+      <userInput
+        placeholder="Name"
+      />
+      <span></span>
+      <userInput 
+        placeholder="Email"
+      />
+      <userInput 
+        placeholder="Password"
+      />
+      <userInput 
+        placeholder="Repeat password"
+      />
+    </form>
+    <LoginBtn
+      class="reg-btn" 
+      :labelButton="'Registration'"
+    />
+  </div>
+</template>
+
+
+<script>
+import userInput from '../components/ui/userInput.vue'
+import LoginBtn from '../components/ui/LoginBtn.vue'
+export default {
+  name: 'ResetPage',
+  components: {
+    userInput,
+    LoginBtn
+  }
+}
+
+</script>
+
+<style lang="scss" scoped>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    min-height: auto;
+    background-color: #eeeeee;
+    box-shadow: 8px 10px 12px 0px rgba(3, 5, 7, 0.2);
+    border: 1px solid rgba(128, 128, 128, 0.2784313725);
+    border-radius: 4%;
+    .reg-btn {
+      margin-bottom: 2vh;
+    }
+  }
+
+</style>
