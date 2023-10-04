@@ -1,7 +1,11 @@
 <template>
   <div class="check-container">
     <div class="check-box">
-      <input type="checkbox" >
+      <input 
+        type="checkbox"
+        role="switch"
+        name=""
+      >
     </div>
     <span>Запомнить меня</span>
   </div>
