@@ -18,6 +18,9 @@
 
 
 <style lang="scss" scoped>
+a {
+  text-decoration: none;
+}
 .page-block {
   display: flex;
   justify-content: center;
@@ -27,8 +30,6 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     font-size: 20px;
-    border: 1px solid #000;
-    border-radius: 30%;
   }
 }
 

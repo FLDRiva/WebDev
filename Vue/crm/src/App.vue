@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <div class="container">
-      <!-- <router-view /> -->
-      <LoadingPage />
+      <router-view />
+      <!-- <LoadingPage /> -->
     </div> 
   </div>
 </template>
 
 <script>
-import LoadingPage from '../src/views/LoadingPage.vue'
+// import LoadingPage from '../src/views/LoadingPage.vue'
 export default {
   name: 'App',
   components: {
-    LoadingPage,
+    // LoadingPage,
   },
 
 }
