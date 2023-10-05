@@ -9,6 +9,9 @@
       maxlength="40"
       minlength="1"
       :placeholder="placeholder"
+      :type="type"
+      :required="required"
+      
     >
     <!-- <p>{{ writeLogin }}</p> -->
     </div>
@@ -37,8 +40,16 @@ export default {
     placeholder: {
       type: String,
       default: '',
-      required: true
     },
+    type : {
+      type: String,
+      default: 'text'
+    },
+    required: {
+      type: Boolean,
+      default: false
+    }
+
   }
 }
 </script>

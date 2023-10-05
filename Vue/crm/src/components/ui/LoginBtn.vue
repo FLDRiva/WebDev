@@ -1,8 +1,10 @@
 <template>
   <div class="login-btn">
-    <button>
-      {{ labelButton }}
-    </button>
+    <router-link to="/profile">
+      <button>
+        {{ labelButton }}
+      </button>
+    </router-link>
   </div>
 </template>
 

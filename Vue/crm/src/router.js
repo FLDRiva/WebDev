@@ -23,6 +23,10 @@ export default new Router({
     {
       path: '/reset',
       component: () => import('../src/views/ResetPage')
+    },
+    {
+      path: '/profile',
+      component: () => import('../src/views/usersProfile')
     }
 
   ]

@@ -2,9 +2,12 @@
       <div class="container">
         <userInput
           placeholder="Login"
+          :required="true"
         />
         <userInput
           placeholder="Password"
+          :type="'password'"
+          :required="true"
         />
         <LoginBtn :labelButton="'Sign in'"/>
         <SaveMe />
