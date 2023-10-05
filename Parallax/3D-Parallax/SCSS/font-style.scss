@@ -1,0 +1,17 @@
+@font-face {
+    font-family: kamerik-3d;
+    src: url(../fonts/kamerik205-heavy.woff2);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: weather-italic-3d;
+    src: url(../fonts/merriweather-regular-italic.woff2);
+
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: kamerik-3d;
+}

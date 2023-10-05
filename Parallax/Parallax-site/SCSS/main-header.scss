@@ -1,0 +1,118 @@
+$inxT: calc((1vw + 1vh) * 2.5);
+$inxC: calc((1vw + 1vh) / 1.1);
+$letterT: calc((1vw + 1vh) / 4.5);
+$letterC: calc((1vw + 1vh) / 2.25);
+$lettermaH: calc((1vw + 1vh) / 7.5);
+$inxT: calc((1vw + 1vh) * 2.5);
+$indAf: calc((1vw + 1vh) * 10);
+$indAf2: calc((1vw + 1vh) * -5);
+$indmaH: calc((1vw + 1vh) * 1.8);
+$color: rgb(239 237 204);
+$mainArticleTransform: translate3d(0, calc(var(--scrollTop) / -10), 0);
+$--transition: transform .75s cubic-bezier(.075, 0.5, 0, 1);;
+
+.main-header {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        height: $indAf;
+        background-image: url(../img/ground.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        bottom: $indAf2;
+    }
+    .layers {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .layer {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        will-change: transform;
+        transition: $--transition;
+        z-index: 2;
+    }
+    .layers__base {
+        transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+        z-index: 0;
+    }
+    .layers__middle {
+        transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
+    }
+    .layes__front {
+        transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+    }
+    .layers__header {
+        z-index: 1;
+        transform: translate3d(0, calc(var(--scrollTop) / 2), 0); 
+        transition: $--transition;
+        text-transform: uppercase;
+        will-change: transform;
+        // font-size: $inx;
+        font-weight: 900;
+        color: $color;
+        text-shadow: 0 0 15px #ebb749;
+        padding: 0px 0 3vh 0;
+    }
+    .layers_caption {
+        font-size: $inxC;
+        letter-spacing: $letterC;
+    }
+    .layers__title {
+        font-size: $inxT;
+        letter-spacing: $letterT;
+    }
+}
+
+.content {
+    will-change: transform;
+}
+
+.main-article {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    .main-article__header {
+        text-transform: uppercase;
+        font-size: $indmaH;
+        letter-spacing: $lettermaH;
+        transform: $mainArticleTransform;
+        transition: $--transition;
+        will-change: transform;
+    }
+    .main_article_paragraph {
+        max-width: calc((1vw + 1vh) * 30);
+        font-size: calc((1vw + 1vh) * .9);
+        margin-top: calc((1vw + 1vh) * 1.2);
+        transform: $mainArticleTransform;
+        transition: $--transition;
+        will-change: transform; 
+    }
+    .copy {
+         position: absolute;
+         bottom: calc((1vw + 1vh) * 2.5);
+         opacity: 0.45;
+         font-size: calc((1vw + 1vh) * 0.75);
+         letter-spacing: calc((1vw + 1vh) / 37.5);
+    }
+}
+
+

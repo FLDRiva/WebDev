@@ -1,0 +1,112 @@
+@import 'calc.css';
+.layers .layers__container .layers__item {
+  inset: -5vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: calc((1vw + 1vh) * 7.8);
+  height: calc((1vw + 1vh) * 7.8);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: calc(50% - (1vw + 1vh) * 7.8 / 2);
+  top: calc((1vw + 1vh) * 2.8);
+  z-index: 1;
+}
+
+.layers {
+  perspective: 1000px;
+  overflow: hidden;
+}
+.layers .layers__container {
+  height: 100vh;
+  min-height: 500px;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  will-change: transform;
+  transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+}
+.layers .layers__container .hero-content {
+  font-size: calc((1vw + 1vh) * 2);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: calc((1vw + 1vh) * -0.15);
+  line-height: 1.35em;
+  margin-top: calc((1vw + 1vh) * 5.5);
+}
+.layers .layers__container .hero-content span {
+  display: block;
+}
+.layers .layers__container .hero-content p {
+  text-transform: none;
+  font-family: weather-italic-3d;
+  letter-spacing: normal;
+  font-size: calc((1vw + 1vh) * 0.73);
+  line-height: 3;
+}
+.layers .layers__container .hero-content .button-start {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: calc((1vw + 1vh) * 0.7);
+  letter-spacing: -0.02vw;
+  padding: calc((1vw + 1vh) * 0.7) calc((1vw + 1vh) * 1.25);
+  background-color: transparent;
+  color: #fff;
+  border-radius: 10em;
+  border: rgb(255, 255, 255) 3px solid;
+  outline: none;
+  cursor: pointer;
+}
+.layers .layers__container .layers__item {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layers .layers__container .layers__item .layer-1 {
+  transform: translateZ(-55px) scale(1.06);
+}
+.layers .layers__container .layers__item .layer-2 {
+  transform: translateZ(80px) scale(0.88);
+}
+.layers .layers__container .layers__item .layer-3 {
+  transform: translateZ(180px) scale(0.8);
+}
+.layers .layers__container .layers__item .layer-4 {
+  transform: translateZ(190px) scale(0.9);
+}
+.layers .layers__container .layers__item .layer-5 {
+  transform: translateZ(300px) scale(0.9);
+}
+.layers .layers__container .layers__item .layer-6 {
+  transform: translateZ(380px);
+}
+
+.layer-4,
+.layer-5,
+.layer-6 {
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: kamerik-3d;
+  src: url(../fonts/kamerik205-heavy.woff2);
+  font-weight: 900;
+}
+@font-face {
+  font-family: weather-italic-3d;
+  src: url(../fonts/merriweather-regular-italic.woff2);
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: kamerik-3d;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,20 @@
+%relaway_f1 {
+    @font-face {
+        font-family: releway_f, sans-serif;
+        src: url(../fonts/raleway-regular.woff2);
+    }
+}
+%relaway_f2 {
+    src: url(../fonts/raleway-black.woff2);
+    font-weight: 900;
+    line-height: 1.55;
+}
+
+
+body {
+    background-color: #000;
+    @extend %relaway_f1
+}
+
+
+@import 'reload-style.scss', 'main-header.scss'
