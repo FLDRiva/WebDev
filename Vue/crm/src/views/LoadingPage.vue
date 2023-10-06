@@ -9,7 +9,11 @@
           :type="'password'"
           :required="true"
         />
-        <LoginBtn :labelButton="'Sign in'"/>
+        <router-link to="/profile">
+          <LoginBtn 
+            :labelButton="'Sign in'"
+          />
+        </router-link>
         <SaveMe />
         <div class="reg-pass">
           <signIn />

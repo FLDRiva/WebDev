@@ -1,10 +1,8 @@
 <template>
   <div class="login-btn">
-    <router-link to="/profile">
-      <button>
-        {{ labelButton }}
-      </button>
-    </router-link>
+    <button type="submit">
+      {{ labelButton }}
+    </button>
   </div>
 </template>
 
@@ -14,7 +12,21 @@ export default {
   props: {
     labelButton: {
       type: String,
-      default: '12'
+      default: ''
+    }
+  },
+  methods: {
+    onSubmit() {
+      if (this.title.trim()) {
+        const newTodo = {
+          id: Date.now(),
+          title: this.title,
+          completed: false
+        }
+
+        this.$emit('add-todo', newTodo)
+        this.title = ''
+      }
     }
   }
 }

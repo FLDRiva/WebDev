@@ -5,15 +5,14 @@
     <img width="18" height="19" view-box="0 0 18 19" fill="none" src="https://img.icons8.com/fluency-systems-filled/48/737373/user-credentials.png" alt="user-credentials">
       
     <input
-      v-model="writeLogin"
       maxlength="40"
       minlength="1"
       :placeholder="placeholder"
       :type="type"
       :required="required"
-      
+      :value="value"
+      @input="$emit('input', $event.target.value)"
     >
-    <!-- <p>{{ writeLogin }}</p> -->
     </div>
   </div>
   
@@ -24,14 +23,12 @@
 export default {
   data() {
     return {
-      writeLogin: '',
+      writeLogin: this.value,
     }
   },
   methods: {
-    handLeInput () {
-      this.$emit('input', this.content)
-    }
-  },
+      
+    },
   props: {
     label: {
       type: String,
@@ -41,15 +38,18 @@ export default {
       type: String,
       default: '',
     },
-    type : {
+    type: {
       type: String,
       default: 'text'
     },
     required: {
       type: Boolean,
       default: false
+    },
+    value : {
+      type: String,
+      default: ''
     }
-
   }
 }
 </script>

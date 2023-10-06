@@ -2,23 +2,29 @@
   <div class="container">
     <form>
       <userInput
+        v-model="user.name"
         placeholder="Name"
       />
-      <span></span>
       <userInput 
+        v-model="user.email"
         placeholder="Email"
+        :type="'email'"
       />
-      <userInput 
+      <userInput
+        v-model="user.password" 
         placeholder="Password"
+        :type="'password'"
       />
-      <userInput 
+      <userInput
+        v-model="user.repeatPassword" 
         placeholder="Repeat password"
+        :type="'password'"
       />
     </form>
-    <LoginBtn
-      class="reg-btn" 
-      :labelButton="'Registration'"
-    />
+      <LoginBtn
+        class="reg-btn" 
+        :labelButton="'Registration'"
+      />
   </div>
 </template>
 
@@ -28,6 +34,16 @@ import userInput from '../components/ui/userInput.vue'
 import LoginBtn from '../components/ui/LoginBtn.vue'
 export default {
   name: 'ResetPage',
+  data() {
+    return {
+      user: {
+        name: '',
+        email: '',
+        password: '',
+        repeatPassword: ''
+      }
+    }
+  },
   components: {
     userInput,
     LoginBtn

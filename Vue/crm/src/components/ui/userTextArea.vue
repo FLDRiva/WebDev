@@ -15,10 +15,14 @@ export default {
   name: 'userTextArea',
   data() {
     return {
-      areaText: ''
+      areaText: this.value
     }
   },
   props: {
+    value: {
+      type: String,
+      default: ''
+    },
     placeholder: {
       type: String,
       default: '',
@@ -30,7 +34,7 @@ export default {
     rows: {
       type: Number,
       default: 10
-    }
+    },
   }
 }
 
@@ -44,9 +48,17 @@ export default {
   box-shadow: 5px 6px 5px -4px rgba(5, 5, 5, 0.48);
   transition: all .4s ease-in-out;
   width: 450px;
+  margin-top: 2vh;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  textarea {
+    resize: none;
+    &:focus,:hover {
+      outline: none;
+      border: none;
+    }
+  }
 }
 
 

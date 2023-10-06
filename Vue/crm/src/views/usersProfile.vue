@@ -3,16 +3,20 @@
     <main class="user-profile">
       <section class="user-profile__1">
         <img class="us-avatar" src="../assets/images/avatar_test.jpg">
-        <h2>{{ user1.name }}</h2>
-        <p>{{ user1.mail }}</p>
+        <h2 class="user__text">{{ user1.name }}</h2>
+        <p class="user__text">{{ user1.mail }}</p>
+        <p class="user__text">
+          
+        </p>
         <LoginBtn :label-button="'Edit Profile'"/>
         
       </section>
       <section class="user_profile__2">
-        <h2>My profile setting</h2>
-        <p>Please,edit your details below</p>
+        <h2 class="user__text">My profile setting</h2>
+        <p class="user__text">Please,edit your details below</p>
         <nav class="user-hold">
-          <UserInput 
+          <UserInput
+            v-model="content"
             :placeholder="'Password'"
             :type="'password'"
             :required="true"
@@ -23,12 +27,16 @@
             :required="true"
           />
           <UserInput
+            class="user__text"
             :type="'date'"
             :required="false"
           />
-          <userTextArea 
-            :cols="10"
+          <userTextArea
+            :cols="61"
             :rows="10"
+          />
+          <LoginBtn
+            :label-button="'Confim change'"
           />
         </nav>
       </section>
@@ -43,13 +51,18 @@ import UserInput from '../components/ui/userInput.vue'
 import userTextArea from '@/components/ui/userTextArea.vue'
 export default {
     name: 'userProfile',
+    props:['value'],
     data() {
       return {
         user1: {
           name: 'Ivan',
           mail: 'ivanov@gmail.com'
         },
+        content: ''
       }
+    },
+    methods: {
+
     },
     components: {
       LoginBtn,
@@ -74,7 +87,12 @@ export default {
     .user-profile {
       display: flex;
       gap: 25vw;
-      margin-top: 5vh;
+      align-items: center;
+      .user__text {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+      }
       .user-profile__1 {
         display: flex;
         flex-direction: column;
