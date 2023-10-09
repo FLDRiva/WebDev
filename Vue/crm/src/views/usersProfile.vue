@@ -16,12 +16,13 @@
         <p class="user__text">Please,edit your details below</p>
         <nav class="user-hold">
           <UserInput
-            v-model="content"
+            v-model="contentPassword"
             :placeholder="'Password'"
             :type="'password'"
             :required="true"
           />
           <UserInput 
+            v-model="contentRepeatPassword"
             :placeholder="'Repeat Password'"
             :type="'password'"
             :required="true"
@@ -58,7 +59,9 @@ export default {
           name: 'Ivan',
           mail: 'ivanov@gmail.com'
         },
-        content: ''
+        contentPassword: '',
+        contentRepeatPassword: '',
+        
       }
     },
     methods: {
@@ -84,10 +87,18 @@ export default {
     box-shadow: 8px 10px 12px 0px rgba(3, 5, 7, 0.2);
     border: 1px solid #80808047;
     border-radius: 4%;
+    @media (max-width: 767px) {
+      width: 390px;
+      flex-direction: column;
+    }
     .user-profile {
       display: flex;
       gap: 25vw;
       align-items: center;
+      @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+      }
       .user__text {
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 400;
@@ -96,18 +107,32 @@ export default {
       .user-profile__1 {
         display: flex;
         flex-direction: column;
+        @media (max-width: 767px) {
+          margin-top: 1vh;
+          align-items: center;
+        }
         .us-avatar {
           max-width: 10vw;
           max-height: 15vh;
           border-radius: 56%;
+          @media (max-width: 767px) {
+            width: 50px;
+            height: 50px;
+          }
         }
       }
       .user_profile__2 {
         display: flex;
         flex-direction: column;
+        @media (max-width: 767px) {
+          align-items: center;
+        }
         .user-hold {
           display: flex;
           flex-direction: column;
+          @media (max-width: 767px) {
+            align-items: center;
+          }
         }
       }
     }

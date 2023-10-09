@@ -32,6 +32,12 @@ a {
     font-size: 20px;
   }
 }
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
 
+}
+
+@media (max-width: 767px) {
+  
+}
 
 </style>

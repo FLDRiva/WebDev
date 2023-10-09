@@ -68,5 +68,11 @@ export default {
     }
   }
 
+  @media (max-width: 767px) {
+    .container {
+      width: 388px;
+    }
+}
+
 
 </style>
