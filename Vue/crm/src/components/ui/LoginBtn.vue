@@ -1,6 +1,6 @@
 <template>
   <div class="login-btn">
-    <button type="submit">
+    <button type="button" @click="$emit('click')">
       {{ labelButton }}
     </button>
   </div>
@@ -15,20 +15,6 @@ export default {
       default: ''
     }
   },
-  methods: {
-    onSubmit() {
-      if (this.title.trim()) {
-        const newTodo = {
-          id: Date.now(),
-          title: this.title,
-          completed: false
-        }
-
-        this.$emit('add-todo', newTodo)
-        this.title = ''
-      }
-    }
-  }
 }
 
 </script>

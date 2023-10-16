@@ -3,13 +3,19 @@
     <main class="user-profile">
       <section class="user-profile__1">
         <img class="us-avatar" src="../assets/images/avatar_test.jpg">
-        <h2 class="user__text">{{ user1.name }}</h2>
-        <p class="user__text">{{ user1.mail }}</p>
-        <p class="user__text">
-          
-        </p>
+        <div class="user__text">
+          <h2 class="user__text">{{ user1.name }}</h2>
+          <p class="user__text">{{ user1.mail }}</p>
+        </div>
+        <form @submit.prevent>
+          <span class="user__text">
+            {{ user1.bio }}
+          </span>
+          <p class="user__text">
+            {{ user1.date }}
+          </p>
+        </form>
         <LoginBtn :label-button="'Edit Profile'"/>
-        
       </section>
       <section class="user_profile__2">
         <h2 class="user__text">My profile setting</h2>
@@ -28,17 +34,22 @@
             :required="true"
           />
           <UserInput
+            v-model="contentDateUsers"
             class="user__text"
             :type="'date'"
             :required="false"
           />
           <userTextArea
+            v-model="contentBio"
+            class="text__area"
             :cols="61"
             :rows="10"
           />
           <LoginBtn
+            @click="onConfirmBtn"
             :label-button="'Confim change'"
           />
+          
         </nav>
       </section>
     </main>
@@ -57,15 +68,23 @@ export default {
       return {
         user1: {
           name: 'Ivan',
-          mail: 'ivanov@gmail.com'
+          mail: 'ivanov@gmail.com',
+          bio: '',
+          date: '',
         },
         contentPassword: '',
         contentRepeatPassword: '',
+        contentBio: '',
+        contentDateUsers: ''
         
       }
     },
     methods: {
-
+      onConfirmBtn() {
+        this.user1.bio = this.contentBio;
+        this.user1.date = this.contentDateUsers;
+      },
+      
     },
     components: {
       LoginBtn,
@@ -90,12 +109,21 @@ export default {
     @media (max-width: 767px) {
       width: 390px;
       flex-direction: column;
+      overflow-x: hidden;
     }
     .user-profile {
       display: flex;
-      gap: 25vw;
+      min-width: 1300px;
+      justify-content: space-between;
       align-items: center;
+      @media (max-width: 1367px) {
+        min-width: 1000px;
+      }
+      @media (max-width: 1024px) {
+        min-width: 800px;
+      }
       @media (max-width: 767px) {
+        min-width: 353px;
         flex-direction: column;
         align-items: center;
       }
@@ -107,7 +135,11 @@ export default {
       .user-profile__1 {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        min-height: 450px;
+        gap: 1vh;
         @media (max-width: 767px) {
+          min-height: 212px;
           margin-top: 1vh;
           align-items: center;
         }
@@ -132,6 +164,11 @@ export default {
           flex-direction: column;
           @media (max-width: 767px) {
             align-items: center;
+          }
+          .text__area {
+            @media (max-width: 767px) {
+              width: 370px;
+            }
           }
         }
       }

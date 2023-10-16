@@ -30,6 +30,7 @@ a {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     font-size: 20px;
+    color: #000;
   }
 }
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) {

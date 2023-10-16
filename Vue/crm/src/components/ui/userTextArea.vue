@@ -3,8 +3,9 @@
     <textarea 
       :cols="cols"
       :rows="rows"
-      v-model="areaText"
       :placeholder="placeholder"
+      @input="$emit('input', $event.target.value)"
+      :value="value"
       >
     </textarea>
   </div>
