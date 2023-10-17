@@ -9,7 +9,7 @@
         </div>
         <form @submit.prevent>
           <span class="user__text">
-            {{ user1.bio }}
+            {{ addInf() }}
           </span>
           <p class="user__text">
             {{ user1.date }}
@@ -72,6 +72,7 @@ export default {
           bio: '',
           date: '',
         },
+        userInf: [],
         contentPassword: '',
         contentRepeatPassword: '',
         contentBio: '',
@@ -84,7 +85,9 @@ export default {
         this.user1.bio = this.contentBio;
         this.user1.date = this.contentDateUsers;
       },
-      
+      addInf() {
+        this.userInf.push(this.contentBio)
+      },
     },
     components: {
       LoginBtn,

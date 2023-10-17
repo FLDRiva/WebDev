@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <p>SYNGEN</p>
+    <router-link to="/">
+      <p>SYNGEN</p>
+    </router-link>
+    
   </div>
 </template>
 
@@ -10,6 +13,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    a {
+      color: #e5e5e5;
+      text-decoration: none;
+      &:hover {
+        color: black;
+      }
+    }
     p {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 400;

@@ -32,10 +32,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .container {
-    display: flex;
-    justify-content: center;
-  }
   header, footer {
     min-width: 100vw;
     background-color: #333;
