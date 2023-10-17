@@ -21,6 +21,9 @@ $f: flex;
     @media (max-width: 767px) {
       width: 360px;
     }
+    @media (max-width: 400px) {
+      width: 325px;
+    }
     input {
       flex-grow: 2;
       width: 90%;

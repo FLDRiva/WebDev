@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-signup">
     <form>
       <userInput
         v-model="user.name"
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .container {
+  .container-signup {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,6 +64,12 @@ export default {
     box-shadow: 8px 10px 12px 0px rgba(3, 5, 7, 0.2);
     border: 1px solid rgba(128, 128, 128, 0.2784313725);
     border-radius: 4%;
+    @media (max-width: 767px) {
+      width: 390px;
+    }
+    @media (max-width: 400px) {
+      width: 366px;
+    }
     .reg-btn {
       margin-bottom: 2vh;
     }

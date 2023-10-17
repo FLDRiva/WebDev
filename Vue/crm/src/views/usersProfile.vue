@@ -127,6 +127,9 @@ export default {
         flex-direction: column;
         align-items: center;
       }
+      @media (max-width: 400px) {
+        width: 366px;
+      }
       .user__text {
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 400;

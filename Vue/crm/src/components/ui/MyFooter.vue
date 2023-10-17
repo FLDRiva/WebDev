@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-social">
     <p>
       by Andrey Revin
     </p>
@@ -18,7 +18,7 @@
 </template>
 
 <style lang="scss" scoped>
-  .container {
+  .container-social {
     display: flex;
     justify-content: space-around;
     a {
