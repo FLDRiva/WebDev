@@ -27,7 +27,11 @@ export default new Router({
     {
       path: '/profile',
       component: () => import('../src/views/usersProfile')
-    }
+    },
+    {
+      path: '/item',
+      component: () => import('../src/views/ProductList')
+    },
 
   ]
 }) 

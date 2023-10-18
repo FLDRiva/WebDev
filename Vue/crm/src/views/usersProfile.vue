@@ -4,10 +4,10 @@
       <section class="user-profile__1">
         <img class="us-avatar" src="../assets/images/avatar_test.jpg">
         <div class="user__text">
-          <h2 class="user__text">{{ user1.name }}</h2>
-          <p class="user__text">{{ user1.mail }}</p>
+          <h2 class="user__text">{{ changeName }}</h2>
+          <p class="user__text">{{ changeMail }}</p>
         </div>
-        <form @submit.prevent>
+        <form @submit.prevent="newBio">
           <span class="user__text">
             {{ user1.bio }}
           </span>
@@ -15,7 +15,9 @@
             {{ user1.date }}
           </p>
         </form>
-        <LoginBtn :label-button="'Edit Profile'"/>
+        <LoginBtn
+          :label-button="'Edit Profile'"
+        />
       </section>
       <section class="user_profile__2">
         <h2 class="user__text">My profile setting</h2>
@@ -36,6 +38,7 @@
           <UserInput
             v-model="contentDateUsers"
             class="user__text"
+            :placeholder="'Date of Brith'"
             :type="'date'"
             :required="false"
           />
@@ -46,7 +49,7 @@
             :rows="10"
           />
           <LoginBtn
-            @click="onConfirmBtn"
+            @click="addUserInfo"
             :label-button="'Confim change'"
           />
           
@@ -63,16 +66,14 @@ import UserInput from '../components/ui/userInput.vue'
 import userTextArea from '@/components/ui/userTextArea.vue'
 export default {
     name: 'userProfile',
-    props:['value'],
     data() {
       return {
         user1: {
-          name: 'Ivan',
-          mail: 'ivanov@gmail.com',
+          name: '',
+          mail: '',
           bio: '',
           date: '',
         },
-        userInf: [],
         contentPassword: '',
         contentRepeatPassword: '',
         contentBio: '',
@@ -80,13 +81,20 @@ export default {
         
       }
     },
-    methods: {
-      onConfirmBtn() {
-        this.user1.bio = this.contentBio;
-        this.user1.date = this.contentDateUsers;
+    computed: {
+      changeName() {
+        return this.$store.getters.NAME
       },
-      addInf() {
-        this.userInf.push(this.contentBio)
+      changeMail() {
+        return this.$store.getters.MAIL
+      }
+    },
+    methods: {
+      addUserInfo() {
+        this.$store.commit('SET_DATE', this.contentDateUsers)
+        this.$store.commit('SET_INFO', this.contentBio)
+        this.user1.bio = this.$store.getters.INFO;
+        this.user1.date = this.$store.getters.DATE;
       },
     },
     components: {

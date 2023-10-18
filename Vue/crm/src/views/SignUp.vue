@@ -1,31 +1,35 @@
 <template>
-  <div class="container-signup">
-    <form>
-      <userInput
-        v-model="user.name"
-        placeholder="Name"
-      />
-      <userInput 
-        v-model="user.email"
-        placeholder="Email"
-        :type="'email'"
-      />
-      <userInput
-        v-model="user.password" 
-        placeholder="Password"
-        :type="'password'"
-      />
-      <userInput
-        v-model="user.repeatPassword" 
-        placeholder="Repeat password"
-        :type="'password'"
-      />
-    </form>
+  <div class="container">
+    <div class="container-signup">
+      <form>
+        <userInput
+          v-model="user.name"
+          placeholder="Name"
+        />
+        <userInput 
+          v-model="user.email"
+          placeholder="Email"
+          :type="'email'"
+        />
+        <userInput
+          v-model="user.password" 
+          placeholder="Password"
+          :type="'password'"
+        />
+        <userInput
+          v-model="user.repeatPassword" 
+          placeholder="Repeat password"
+          :type="'password'"
+        />
+      </form>
       <LoginBtn
+        @click="addUser"
         class="reg-btn" 
         :labelButton="'Registration'"
       />
+    </div>
   </div>
+
 </template>
 
 
@@ -44,6 +48,11 @@ export default {
       }
     }
   },
+  methods: {
+    addUser() {
+      this.$store.commit('SET_NAME', this.name)
+    }
+  },
   components: {
     userInput,
     LoginBtn
@@ -53,26 +62,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .container-signup {
+  .container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 500px;
-    min-height: auto;
-    background-color: #eeeeee;
-    box-shadow: 8px 10px 12px 0px rgba(3, 5, 7, 0.2);
-    border: 1px solid rgba(128, 128, 128, 0.2784313725);
-    border-radius: 4%;
-    @media (max-width: 767px) {
-      width: 390px;
-    }
-    @media (max-width: 400px) {
-      width: 366px;
-    }
-    .reg-btn {
-      margin-bottom: 2vh;
+    .container-signup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 500px;
+      min-height: auto;
+      background-color: #eeeeee;
+      box-shadow: 8px 10px 12px 0px rgba(3, 5, 7, 0.2);
+      border: 1px solid rgba(128, 128, 128, 0.2784313725);
+      border-radius: 4%;
+      @media (max-width: 767px) {
+        width: 390px;
+      }
+      @media (max-width: 400px) {
+        width: 366px;
+      }
+      .reg-btn {
+        margin-bottom: 2vh;
+      }
     }
   }
+ 
 
 </style>
