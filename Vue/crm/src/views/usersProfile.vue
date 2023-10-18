@@ -9,7 +9,7 @@
         </div>
         <form @submit.prevent>
           <span class="user__text">
-            {{ addInf() }}
+            {{ user1.bio }}
           </span>
           <p class="user__text">
             {{ user1.date }}
