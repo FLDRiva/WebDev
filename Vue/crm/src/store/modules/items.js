@@ -14,6 +14,7 @@ export default {
         price: '0.5$',
         data: new Date,
         expirationDate: '',
+        availability: 20
       },
       {
         id: 2,
@@ -22,6 +23,7 @@ export default {
         price: '0.7$',
         data: new Date,
         expirationDate: '',
+        availability: 2
       },
       {
         id: 3,
@@ -30,6 +32,7 @@ export default {
         price: '0.8$',
         data: new Date,
         expirationDate: '',
+        availability: 17
       },
       
     ]

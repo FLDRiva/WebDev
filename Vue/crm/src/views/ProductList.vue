@@ -11,7 +11,7 @@
       <tr v-for="itemName in NameProduct" :key="itemName.id">
         <td>{{ itemName.name }}</td>
         <td>{{ itemName.compound }}</td>
-        <td>Yes</td>
+        <td>{{ itemName.availability }}</td>
         <td>{{ itemName.price }}</td>
         <td>{{ itemName.data }}</td>
       </tr>
@@ -23,11 +23,15 @@
 <script>
 export default {
   name: 'ProductList',
-  
+  data() {
+    return {
+    }
+  },
   computed: {
     NameProduct() {
       return this.$store.getters.ITEM_NAME
     },
+    
   },
   methods: {
 
