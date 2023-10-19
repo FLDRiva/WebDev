@@ -7,7 +7,7 @@
           <h2 class="user__text">{{ changeName }}</h2>
           <p class="user__text">{{ changeMail }}</p>
         </div>
-        <form @submit.prevent="newBio">
+        <form @submit.prevent="addUserInfo">
           <span class="user__text">
             {{ user1.bio }}
           </span>
@@ -69,8 +69,6 @@ export default {
     data() {
       return {
         user1: {
-          name: '',
-          mail: '',
           bio: '',
           date: '',
         },
@@ -80,6 +78,9 @@ export default {
         contentDateUsers: ''
         
       }
+    },
+    mounted: {
+      
     },
     computed: {
       changeName() {
