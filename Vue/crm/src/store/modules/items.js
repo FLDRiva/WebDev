@@ -1,9 +1,21 @@
 export default {
   actions: {
-
+    async updateItem({commit}) {
+      setTimeout(() => {
+        commit('conectItem')
+      }, 2000);
+    },
+    GET_SEARCH_VALUE ({commit}, value) {
+      commit('SET_SERCH', value)
+    }
   },
   mutations: {
-
+    conectItem(state, products) {
+      state.products = products
+    },
+    SET_SERCH:(state, value) => {
+      state.searchItem = value
+    }
   },
   state: {
     products: [
@@ -35,13 +47,17 @@ export default {
         availability: 17
       },
       
-    ]
+    ],
+    searchItem: '',
   },
   getters: {
     ITEM_NAME: state => {
       return state.products.filter(p => {
-        return p.name
+        return p.name && p.compound
       })
     },
+    SEARCH_ITEM: state => {
+      return state.searchItem
+    }
   }
 }

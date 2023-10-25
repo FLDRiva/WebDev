@@ -32,6 +32,11 @@ export default new Router({
       path: '/item',
       component: () => import('../src/views/ProductList')
     },
+    {
+      path: '/item/:add',
+      name: 'addItems',
+      component: () => import('../src/views/addItem')
+    },
 
   ]
 }) 

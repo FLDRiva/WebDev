@@ -1,5 +1,20 @@
 <template>
   <div class="container">
+    <div class="head-table">
+      <addButton 
+        @click="$router.push({path: '/item/add'})"
+        :label-button="'Add item'"
+      />
+      <Input 
+        :type="'text'"
+        :placeholder="'Search'"
+        v-model="searchInput"
+      />
+      <addButton 
+        @click="findItem(searchInput)"
+        :label-button="'Find'"
+      />
+    </div>
     <table>
       <tr>
         <th>Product Name</th>
@@ -21,23 +36,35 @@
 
 
 <script>
+import Input from '../components/ui/standartInput.vue'
+import addButton from '../components/ui/LoginBtn.vue'
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: 'ProductList',
   data() {
     return {
+      searchInput: '',
     }
   },
   computed: {
     NameProduct() {
       return this.$store.getters.ITEM_NAME
     },
+    ...mapGetters(['SEARCH_ITEM']),
     
   },
   methods: {
-
+    ...mapActions(["updateItem"]),
+    ...mapActions(['GET_SEARCH_VALUE']),
+    findItem(value) {
+    this.GET_SEARCH_VALUE(value);
+   },
   },
   components: {
-
+    addButton, Input
+  },
+  async mounted() {
+    this.updateItem
   }
 }
 
@@ -47,9 +74,14 @@ export default {
 <style lang="scss" scoped>
 .container {
   display: flex;
-  min-width: 100vw;
+  flex-direction: column;
+  min-height: 80vh;
+  .head-table {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+  }
   table {
-    width: 92%;
     height: 200px;
     background-color: #eeeeee;
     box-shadow: 8px 10px 12px 0px rgba(3, 5, 7, 0.2);
@@ -73,7 +105,6 @@ export default {
     }
     td {
       text-align: center;
-      // padding: 8px;
       border: 1px solid #dddddd;
       width: 180px;
     }
