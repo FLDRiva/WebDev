@@ -2,7 +2,7 @@
   <div class="container">
     <div class="head-table">
       <addButton 
-        @click="$router.push({path: '/item/add'})"
+        @click="showModal"
         :label-button="'Add item'"
       />
       <Input 
@@ -11,8 +11,18 @@
         v-model="searchInput"
       />
       <addButton 
-        @click="findItem(searchInput)"
+        @click="findItem"
         :label-button="'Find'"
+      />
+      <addButton 
+        @click="returnItem"
+        :label-button="'Clear'"
+      />
+    </div>
+    <div class="v-modal-container">
+      <modal 
+        v-show="isModalVisible"
+        @close="closeModal"
       />
     </div>
     <table>
@@ -23,7 +33,7 @@
         <th>Price</th>
         <th>Data</th>
       </tr>
-      <tr v-for="itemName in NameProduct" :key="itemName.id">
+      <tr v-for="itemName in items" :key="itemName.id">
         <td>{{ itemName.name }}</td>
         <td>{{ itemName.compound }}</td>
         <td>{{ itemName.availability }}</td>
@@ -38,33 +48,52 @@
 <script>
 import Input from '../components/ui/standartInput.vue'
 import addButton from '../components/ui/LoginBtn.vue'
+import modal from '../components/ui/modal.vue'
 import { mapActions, mapGetters } from "vuex";
 export default {
   name: 'ProductList',
   data() {
     return {
       searchInput: '',
+      items: [],
+      originalItems: [],
+      isModalVisible: false,
     }
   },
   computed: {
-    NameProduct() {
-      return this.$store.getters.ITEM_NAME
-    },
-    ...mapGetters(['SEARCH_ITEM']),
-    
+    ...mapGetters(['ITEM_NAME']), 
+  },
+  watch: {
+    ITEM_NAME(value) {
+      this.items = value;
+      this.originalItems = value;
+    }
   },
   methods: {
     ...mapActions(["updateItem"]),
-    ...mapActions(['GET_SEARCH_VALUE']),
-    findItem(value) {
-    this.GET_SEARCH_VALUE(value);
-   },
+
+    findItem() {
+      const search = this.searchInput.toLowerCase();
+      const result = this.items.filter((item) => {
+        return item.compound.toLowerCase().includes(search) || item.name.toLowerCase().includes(search)
+      });
+      this.items = result;
+    },
+    returnItem() {
+      this.items = this.originalItems
+    },
+    showModal() {
+      this.isModalVisible = true
+    },
+    closeModal() {
+      this.isModalVisible = false
+    }
   },
   components: {
-    addButton, Input
+    addButton, Input, modal
   },
   async mounted() {
-    this.updateItem
+    this.updateItem()
   }
 }
 
@@ -80,6 +109,11 @@ export default {
     display: flex;
     justify-content: space-around;
     margin-bottom: 2vh;
+  }
+  .v-modal-container {
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
   }
   table {
     height: 200px;

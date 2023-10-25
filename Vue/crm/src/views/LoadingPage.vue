@@ -3,7 +3,9 @@
         <userInput
           placeholder="Login"
           :required="true"
-        />
+        >
+          <p>dfgdfg</p>
+        </userInput> 
         <userInput
           placeholder="Password"
           :type="'password'"
