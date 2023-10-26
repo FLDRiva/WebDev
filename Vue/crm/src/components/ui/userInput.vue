@@ -14,7 +14,6 @@
       @input="$emit('input', $event.target.value)"
     >
     </div>
-    <slot/>
   </div>
   
 </template>

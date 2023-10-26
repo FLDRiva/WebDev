@@ -7,8 +7,7 @@ export default {
           name: 'Goat milk',
           compound: 'Alpine goat milk',
           price: '0.5$',
-          data: new Date,
-          expirationDate: '',
+          date: new Date,
           availability: 20
         },
         {
@@ -16,17 +15,15 @@ export default {
           name: 'Cottage cheese',
           compound: 'Goat milk, Bifidobacterium',
           price: '0.7$',
-          data: new Date,
-          expirationDate: '',
-          availability: 2
+          date: new Date,
+          availability: 15
         },
         {
           id: 3,
           name: 'Cheese with spices',
           compound: 'Goat milk, Bifidobacterium, Paprika and Herbs',
           price: '0.8$',
-          data: new Date,
-          expirationDate: '',
+          date: new Date,
           availability: 17
         },
       ]
@@ -39,10 +36,12 @@ export default {
     conectItem(state, products) {
       state.products = products
     },
+    addItem(state, newProduct) {
+      state.products.push(newProduct) 
+    }
   },
   state: {
     products: [],
-    searchItem: '',
   },
   getters: {
     ITEM_NAME: state => {

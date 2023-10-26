@@ -38,7 +38,7 @@
         <td>{{ itemName.compound }}</td>
         <td>{{ itemName.availability }}</td>
         <td>{{ itemName.price }}</td>
-        <td>{{ itemName.data }}</td>
+        <td>{{ itemName.date }}</td>
       </tr>
     </table>
   </div>
@@ -67,7 +67,7 @@ export default {
     ITEM_NAME(value) {
       this.items = value;
       this.originalItems = value;
-    }
+    },
   },
   methods: {
     ...mapActions(["updateItem"]),
@@ -108,12 +108,11 @@ export default {
   .head-table {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 2vh;
   }
   .v-modal-container {
     display: flex;
     justify-content: center;
-    padding: 5vh;
+    padding: 3vh;
   }
   table {
     height: 200px;

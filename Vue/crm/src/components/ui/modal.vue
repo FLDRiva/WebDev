@@ -2,18 +2,31 @@
   <div class="v-add-container">
     <div class="v-add-item">
       <slot name="add-item">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
+        <input type="text"
+          :placeholder="'name'"
+          v-model="name"
+        >
+        <input type="text"
+          :placeholder="'compound'"
+          v-model="compound"
+        >
+        <input type="text"
+          :placeholder="'availability'"
+          v-model="availability"
+        >
+        <input type="text"
+          :placeholder="'price'"
+          v-model="price"
+        >
+        <input type="date"
+          v-model="date"
+        >
         <div class="v-modal-btn">
-          <button @click="close">Add order</button>
-          <button @click="close">Close</button>
+          <button type="submit" @click="upClose">Add order</button>
+          <button type="submit" @click="close">Close</button>
         </div>
       </slot>
     </div>
-
   </div>
 
 
@@ -21,18 +34,33 @@
 </template>
 
 <script>
-// import Input from '../components/ui/standartInput.vue'
-// import Button from '../components/ui/LoginBtn.vue'
+import { mapMutations } from "vuex";
 export default {
   data() {
     return {
-
+      name: '',
+      compound: '',
+      availability: '',
+      price: '',
+      date: new Date
     }
   },
   name: 'addItem',
   methods: {
     close() {
       this.$emit('close')
+    },
+    ...mapMutations(['addItem']),
+    upClose() {
+      this.addItem({
+        name: this.name,
+        compound: this.compound,
+        availability: this.availability,
+        price: this.price,
+        date: this.date
+      });
+      this.$emit('close')
+      this.name = this.compound = this.availability = this.price = this.date = null
     }
   },
 
