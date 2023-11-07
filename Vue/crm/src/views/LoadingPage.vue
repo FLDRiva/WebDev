@@ -1,17 +1,17 @@
 <template>
       <div class="container">
-        <userInput
+        <user-input
           placeholder="Login"
           :required="true"
         >
-        </userInput> 
+        </user-input> 
         <userInput
           placeholder="Password"
           :type="'password'"
           :required="true"
         />
         <router-link to="/profile">
-          <LoginBtn 
+          <login-btn 
             :labelButton="'Sign in'"
           />
         </router-link>
@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import userInput from '../components/ui/userInput'
+import userInput from '../components/ui/UserInput'
 import SaveMe from '../components/ui/SaveMe'
 import LoginBtn from '../components/ui/LoginBtn'
-import signIn from '../components/ui/signIn'
+import signIn from '../components/ui/SignIn'
 import RessetPass from '../components/ui/ResetPass'
 
 export default {

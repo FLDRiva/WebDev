@@ -62,8 +62,8 @@
 
 <script>
 import LoginBtn from '../components/ui/LoginBtn.vue'
-import UserInput from '../components/ui/userInput.vue'
-import userTextArea from '@/components/ui/userTextArea.vue'
+import UserInput from '../components/ui/UserInput.vue'
+import userTextArea from '@/components/ui/UserTextArea.vue'
 export default {
     name: 'userProfile',
     data() {

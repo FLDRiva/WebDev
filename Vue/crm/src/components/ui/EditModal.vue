@@ -2,7 +2,8 @@
   <div class="v-add-container">
     <div class="v-add-item">
       <slot name="add-item">
-        <input type="text"
+        <input
+          type="text"
           :placeholder="'name'"
           v-model="name"
         >
@@ -22,45 +23,44 @@
           v-model="date"
         >
         <div class="v-modal-btn">
-          <button type="submit" @click="upClose">Add order</button>
-          <button type="submit" @click="close">Close</button>
+          <button type="submit" @click="editProduct">CHANGE</button>
         </div>
       </slot>
     </div>
+    
   </div>
-
-
-
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapGetters } from "vuex";
 export default {
+  name: 'modalItem',
+  props: {
+    value: {
+      type: String
+    }
+  },
   data() {
     return {
       name: '',
       compound: '',
       availability: '',
       price: '',
-      date: new Date
+      date: new Date,
+      editItem: []
     }
   },
-  name: 'addItem',
+  computed: {
+    ...mapGetters(['ITEM'])
+  },
+  watch: {
+    ITEM(value) {
+      this.editItem = value;
+    }
+  },
   methods: {
-    close() {
+    editProduct() {
       this.$emit('close')
-    },
-    ...mapMutations(['addItem']),
-    upClose() {
-      this.addItem({
-        name: this.name,
-        compound: this.compound,
-        availability: this.availability,
-        price: this.price,
-        date: this.date
-      });
-      this.$emit('close')
-      this.name = this.compound = this.availability = this.price = this.date = null
     }
   },
 
@@ -121,7 +121,5 @@ export default {
     }
   }
 }
-
-
 
 </style>

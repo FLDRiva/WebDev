@@ -34,7 +34,7 @@
 
 
 <script>
-import userInput from '../components/ui/userInput.vue'
+import userInput from '../components/ui/UserInput.vue'
 import LoginBtn from '../components/ui/LoginBtn.vue'
 export default {
   name: 'ResetPage',

@@ -29,7 +29,7 @@ export default {
       ]
       setTimeout(() => {
         commit('conectItem', itemProducts)
-      }, 2000);
+      }, 300);
     },
   },
   mutations: {
@@ -38,7 +38,7 @@ export default {
     },
     addItem(state, newProduct) {
       state.products.push(newProduct) 
-    }
+    },
   },
   state: {
     products: [],
@@ -49,5 +49,10 @@ export default {
         return p.name && p.compound
       })
     },
+    putItem: state => {
+      return state.products.forEach(element => {
+        return element
+      });
+    }
   }
 }

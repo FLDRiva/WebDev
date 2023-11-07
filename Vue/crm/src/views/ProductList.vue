@@ -2,7 +2,7 @@
   <div class="container">
     <div class="head-table">
       <addButton 
-        @click="showModal"
+        @click="addNewItem"
         :label-button="'Add item'"
       />
       <Input 
@@ -20,9 +20,12 @@
       />
     </div>
     <div class="v-modal-container">
-      <modal 
-        v-show="isModalVisible"
+      <Createmodal 
+        v-if="isModalVisible || isEditMode" 
+        :editMode="isEditMode"
+        :item="item"
         @close="closeModal"
+
       />
     </div>
     <table>
@@ -39,6 +42,9 @@
         <td>{{ itemName.availability }}</td>
         <td>{{ itemName.price }}</td>
         <td>{{ itemName.date }}</td>
+        <td>
+          <i @click="editModal(itemName)" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </td>
       </tr>
     </table>
   </div>
@@ -46,9 +52,9 @@
 
 
 <script>
-import Input from '../components/ui/standartInput.vue'
+import Input from '../components/ui/StandartInput.vue'
 import addButton from '../components/ui/LoginBtn.vue'
-import modal from '../components/ui/modal.vue'
+import Createmodal from '../components/ui/CreateModal.vue'
 import { mapActions, mapGetters } from "vuex";
 export default {
   name: 'ProductList',
@@ -58,6 +64,8 @@ export default {
       items: [],
       originalItems: [],
       isModalVisible: false,
+      item: {},
+      isEditMode: false,
     }
   },
   computed: {
@@ -80,17 +88,32 @@ export default {
       this.items = result;
     },
     returnItem() {
-      this.items = this.originalItems
+      this.items = this.originalItems;
     },
-    showModal() {
-      this.isModalVisible = true
+    addNewItem() {
+      this.isModalVisible = !this.isModalVisible;
+      this.item = 
+        {
+          name: '',
+          compound: '',
+          availability: '',
+          price: '',
+          date: new Date,
+        };
+      this.isEditMode = false;
+    },
+    editModal(data) {
+      this.isEditMode = true
+      this.item = data
+      // console.log(data);
     },
     closeModal() {
       this.isModalVisible = false
-    }
+      this.isEditMode = false 
+    },
   },
   components: {
-    addButton, Input, modal
+    addButton, Input, Createmodal
   },
   async mounted() {
     this.updateItem()
