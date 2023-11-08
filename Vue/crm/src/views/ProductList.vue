@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="head-table">
-      <addButton 
+      <add-button 
         @click="addNewItem"
         :label-button="'Add item'"
       />
@@ -10,17 +10,17 @@
         :placeholder="'Search'"
         v-model="searchInput"
       />
-      <addButton 
+      <add-button 
         @click="findItem"
         :label-button="'Find'"
       />
-      <addButton 
+      <add-button 
         @click="returnItem"
         :label-button="'Clear'"
       />
     </div>
     <div class="v-modal-container">
-      <Createmodal 
+      <create-modal 
         v-if="isModalVisible || isEditMode" 
         :editMode="isEditMode"
         :item="item"
@@ -45,6 +45,9 @@
         <td>
           <i @click="editModal(itemName)" class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </td>
+        <td>
+          <i @click="delItem(itemName)" class="fa fa-trash" aria-hidden="true"></i>
+        </td>
       </tr>
     </table>
   </div>
@@ -53,8 +56,8 @@
 
 <script>
 import Input from '../components/ui/StandartInput.vue'
-import addButton from '../components/ui/LoginBtn.vue'
-import Createmodal from '../components/ui/CreateModal.vue'
+import AddButton from '../components/ui/LoginBtn.vue'
+import CreateModal from '../components/ui/CreateModal.vue'
 import { mapActions, mapGetters } from "vuex";
 export default {
   name: 'ProductList',
@@ -66,6 +69,7 @@ export default {
       isModalVisible: false,
       item: {},
       isEditMode: false,
+      deleteItems: {},
     }
   },
   computed: {
@@ -78,7 +82,7 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["updateItem"]),
+    ...mapActions(["updateItem", 'removeItem']),
 
     findItem() {
       const search = this.searchInput.toLowerCase();
@@ -111,12 +115,19 @@ export default {
       this.isModalVisible = false
       this.isEditMode = false 
     },
+    delItem() {
+      this.items.forEach((elem) => {
+        this.deleteItems = elem
+      })
+      this.removeItem(this.deleteItems)
+    }
   },
   components: {
-    addButton, Input, Createmodal
+    AddButton, Input, CreateModal
   },
   async mounted() {
-    this.updateItem()
+    this.updateItem();
+
   }
 }
 
@@ -163,6 +174,12 @@ export default {
       text-align: center;
       border: 1px solid #dddddd;
       width: 180px;
+      i {
+        cursor: pointer;
+        &:hover {
+          color: blue;
+        }
+      }
     }
   }
 }

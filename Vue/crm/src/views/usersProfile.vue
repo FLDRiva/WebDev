@@ -15,7 +15,7 @@
             {{ user1.date }}
           </p>
         </form>
-        <LoginBtn
+        <login-btn
           :label-button="'Edit Profile'"
         />
       </section>
@@ -23,32 +23,32 @@
         <h2 class="user__text">My profile setting</h2>
         <p class="user__text">Please,edit your details below</p>
         <nav class="user-hold">
-          <UserInput
+          <user-input
             v-model="contentPassword"
             :placeholder="'Password'"
             :type="'password'"
             :required="true"
           />
-          <UserInput 
+          <user-input 
             v-model="contentRepeatPassword"
             :placeholder="'Repeat Password'"
             :type="'password'"
             :required="true"
           />
-          <UserInput
+          <user-input
             v-model="contentDateUsers"
             class="user__text"
             :placeholder="'Date of Brith'"
             :type="'date'"
             :required="false"
           />
-          <userTextArea
+          <user-text-area
             v-model="contentBio"
             class="text__area"
             :cols="61"
             :rows="10"
           />
-          <LoginBtn
+          <login-btn
             @click="addUserInfo"
             :label-button="'Confim change'"
           />
@@ -63,7 +63,7 @@
 <script>
 import LoginBtn from '../components/ui/LoginBtn.vue'
 import UserInput from '../components/ui/UserInput.vue'
-import userTextArea from '@/components/ui/UserTextArea.vue'
+import UserTextArea from '@/components/ui/UserTextArea.vue'
 export default {
     name: 'userProfile',
     data() {
@@ -101,7 +101,7 @@ export default {
     components: {
       LoginBtn,
       UserInput,
-      userTextArea
+      UserTextArea
     }
 }
 

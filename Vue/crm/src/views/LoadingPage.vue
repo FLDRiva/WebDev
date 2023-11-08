@@ -5,7 +5,7 @@
           :required="true"
         >
         </user-input> 
-        <userInput
+        <user-input
           placeholder="Password"
           :type="'password'"
           :required="true"
@@ -15,29 +15,29 @@
             :labelButton="'Sign in'"
           />
         </router-link>
-        <SaveMe />
+        <save-me />
         <div class="reg-pass">
-          <signIn />
-          <RessetPass />
+          <sign-in />
+          <resset-pass />
         </div>
         
     </div> 
 </template>
 
 <script>
-import userInput from '../components/ui/UserInput'
+import UserInput from '../components/ui/UserInput'
 import SaveMe from '../components/ui/SaveMe'
 import LoginBtn from '../components/ui/LoginBtn'
-import signIn from '../components/ui/SignIn'
+import SignIn from '../components/ui/SignIn'
 import RessetPass from '../components/ui/ResetPass'
 
 export default {
   name: 'loadingPage',
   components: {
-    userInput,
+    UserInput,
     SaveMe,
     LoginBtn,
-    signIn,
+    SignIn,
     RessetPass,
   }
 }

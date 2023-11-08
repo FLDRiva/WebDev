@@ -26,7 +26,7 @@ export default new Router({
     },
     {
       path: '/profile',
-      component: () => import('../src/views/usersProfile')
+      component: () => import('../src/views/UsersProfile')
     },
     {
       path: '/item',

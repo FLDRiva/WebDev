@@ -2,27 +2,27 @@
   <div class="container">
     <div class="container-signup">
       <form>
-        <userInput
+        <user-input
           v-model="user.name"
           placeholder="Name"
         />
-        <userInput 
+        <user-input 
           v-model="user.email"
           placeholder="Email"
           :type="'email'"
         />
-        <userInput
+        <user-input
           v-model="user.password" 
           placeholder="Password"
           :type="'password'"
         />
-        <userInput
+        <user-input
           v-model="user.repeatPassword" 
           placeholder="Repeat password"
           :type="'password'"
         />
       </form>
-      <LoginBtn
+      <login-btn
         @click="addUser"
         class="reg-btn" 
         :labelButton="'Registration'"
@@ -34,7 +34,7 @@
 
 
 <script>
-import userInput from '../components/ui/UserInput.vue'
+import UserInput from '../components/ui/UserInput.vue'
 import LoginBtn from '../components/ui/LoginBtn.vue'
 export default {
   name: 'ResetPage',
@@ -54,7 +54,7 @@ export default {
     }
   },
   components: {
-    userInput,
+    UserInput,
     LoginBtn
   }
 }

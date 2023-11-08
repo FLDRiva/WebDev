@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <form>
-      <UserInput 
+      <user-input 
       placeholder="E-mail"
       />
     </form>
-    <LoginBtn 
+    <login-btn 
       class="res-btn"
       :labelButton="'Reset password'"
     />

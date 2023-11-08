@@ -1,6 +1,3 @@
-//TODO ДОРАБОТАТЬ МЕТОД РЕДАКТИРОВАНИЯ ТОВАРОВ
-//TODO ИСПРАВИТ НАЗВАНИЯ В КОДЕ
-//TODO СДЕЛАТЬ РЕФАКТОРИНГ КОДА
 <template>
   <base-modal @close="closeModal">
     <div class="modal-container">
@@ -37,7 +34,7 @@
 
 <script>
 import BaseModal from '../ui/BaseModal.vue'
-import {  mapActions } from "vuex";
+import { mapActions } from "vuex";
 export default {
   name: 'modalItem',
   components: {
@@ -87,6 +84,7 @@ export default {
     },
     changeItem() {
       this.putItem(this.newItem);
+      this.closeModal();
     }
   },
 

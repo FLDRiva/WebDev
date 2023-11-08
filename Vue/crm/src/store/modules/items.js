@@ -40,14 +40,20 @@ export default {
       setTimeout(() => {
         commit('editItem', payload)
       }, 300);
-    }
+    },
+    async removeItem({commit}, payload) {
+      setTimeout(() => {
+        commit('delItem', payload)
+      }, 300);
+    },
   },
+
   mutations: {
     conectItem(state, products) {
       state.products = products
     },
     addItem(state, newProduct) {
-      state.products.push(newProduct) 
+      state.products.unshift(newProduct) 
     },
     editItem(state, changeItem) {
       state.products.forEach(el => {
@@ -55,6 +61,13 @@ export default {
           el = changeItem;
         }
       });
+    },
+    delItem(state, deleteiTem) {
+      state.products.forEach(el => {
+        if (deleteiTem.id === el.id) {
+          state.products.splice(el, 1)
+        }
+      })
     }
   },
   state: {

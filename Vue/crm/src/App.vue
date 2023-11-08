@@ -1,13 +1,18 @@
+//TODO ИСПРАВИТ НАЗВАНИЯ В КОДЕ
+//TODO СДЕЛАТЬ РЕФАКТОРИНГ КОДА
+//TODO МОДАЛКА ПОД МОБИЛКУ
+//TODO ДОБАВИТЬ ИКОНКИ И РАЗОБРАТЬСЯ С ЦВЕТОМ
+
 <template>
   <div id="app">
     <header>
-      <MyHeader />
+      <my-header />
     </header>
     <div class="container">
       <router-view />
     </div> 
     <footer>
-      <MyFooter />
+      <my-footer />
     </footer>
   </div>
 </template>
