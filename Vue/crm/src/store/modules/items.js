@@ -31,6 +31,16 @@ export default {
         commit('conectItem', itemProducts)
       }, 300);
     },
+    async postItem({commit}, payload) {
+      setTimeout(() => {
+        commit('addItem', payload)
+      }, 300);
+    },
+    async putItem({commit}, payload) {
+      setTimeout(() => {
+        commit('editItem', payload)
+      }, 300);
+    }
   },
   mutations: {
     conectItem(state, products) {
@@ -39,6 +49,13 @@ export default {
     addItem(state, newProduct) {
       state.products.push(newProduct) 
     },
+    editItem(state, changeItem) {
+      state.products.forEach(el => {
+        if (changeItem.id === el.id) {
+          el = changeItem;
+        }
+      });
+    }
   },
   state: {
     products: [],
@@ -49,10 +66,5 @@ export default {
         return p.name && p.compound
       })
     },
-    putItem: state => {
-      return state.products.forEach(element => {
-        return element
-      });
-    }
   }
 }

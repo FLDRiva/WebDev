@@ -37,7 +37,7 @@
 
 <script>
 import BaseModal from '../ui/BaseModal.vue'
-import { mapMutations, mapGetters } from "vuex";
+import {  mapActions } from "vuex";
 export default {
   name: 'modalItem',
   components: {
@@ -64,15 +64,14 @@ export default {
     },
   },
   mounted() {
-    this.newItem = this.item
+    this.newItem = this.item;
   },
   computed: {
-    ...mapGetters(['putItem'])
   },
   methods: {
-    ...mapMutations(['addItem']),
+    ...mapActions(['postItem', 'putItem']),
     getItem() {
-      this.addItem({
+      this.postItem({
         id: +Math.random().toString().slice(2),
         name: this.newItem.name,
         compound: this.newItem.compound,
@@ -87,7 +86,7 @@ export default {
       this.name = this.compound = this.availability = this.price = this.date = null
     },
     changeItem() {
-      console.log(this.putItem);
+      this.putItem(this.newItem);
     }
   },
 
