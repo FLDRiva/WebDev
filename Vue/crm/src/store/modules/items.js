@@ -7,7 +7,7 @@ export default {
           name: 'Goat milk',
           compound: 'Alpine goat milk',
           price: '0.5$',
-          date: new Date,
+          date: '1-1-2023',
           availability: 20
         },
         {
@@ -15,7 +15,7 @@ export default {
           name: 'Cottage cheese',
           compound: 'Goat milk, Bifidobacterium',
           price: '0.7$',
-          date: new Date,
+          date: '1-1-2023',
           availability: 15
         },
         {
@@ -23,7 +23,7 @@ export default {
           name: 'Cheese with spices',
           compound: 'Goat milk, Bifidobacterium, Paprika and Herbs',
           price: '0.8$',
-          date: new Date,
+          date: '1-1-2023',
           availability: 17
         },
       ]
@@ -72,6 +72,7 @@ export default {
   },
   state: {
     products: [],
+    select: []
   },
   getters: {
     ITEM_NAME: state => {

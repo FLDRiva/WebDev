@@ -17,7 +17,9 @@
         </form>
         <login-btn
           :label-button="'Edit Profile'"
-        />
+        >
+          Edit Profile
+        </login-btn>
       </section>
       <section class="user_profile__2">
         <h2 class="user__text">My profile setting</h2>
@@ -51,7 +53,9 @@
           <login-btn
             @click="addUserInfo"
             :label-button="'Confim change'"
-          />
+          >
+            Confim change
+          </login-btn>
           
         </nav>
       </section>

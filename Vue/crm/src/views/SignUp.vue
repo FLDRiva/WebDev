@@ -26,7 +26,9 @@
         @click="addUser"
         class="reg-btn" 
         :labelButton="'Registration'"
-      />
+      >
+        Registration
+      </login-btn>
     </div>
   </div>
 

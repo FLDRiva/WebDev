@@ -8,7 +8,9 @@
     <login-btn 
       class="res-btn"
       :labelButton="'Reset password'"
-    />
+    >
+      Reset password
+    </login-btn>
   </div>
 </template>
 

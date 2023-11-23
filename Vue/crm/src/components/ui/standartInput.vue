@@ -1,6 +1,7 @@
 <template>
 <div class="container-input">
     <div class="login-input"> 
+    <i class="fa fa-search search" aria-hidden="true"></i>
     <input
       maxlength="50"
       minlength="1"
@@ -50,6 +51,10 @@ export default {
   flex-direction: column;
   justify-content: flex-end;
   gap: 10px;
+  @media (max-width: 414px) {
+    width: 296px;
+    margin-top: 11px;
+    }
   .login-input {
     padding: 12px;
     display: flex;
@@ -65,8 +70,12 @@ export default {
     @media (max-width: 767px) {
       width: 360px;
     }
-    @media (max-width: 400px) {
-      width: 325px;
+    @media (max-width: 414px) {
+      padding: 6px;
+      width: 296px;
+    }
+    .search {
+      color: #7d7a7a;
     }
     input {
       flex-grow: 2;

@@ -13,7 +13,9 @@
         <router-link to="/profile">
           <login-btn 
             :labelButton="'Sign in'"
-          />
+          >
+            Sign In
+          </login-btn>
         </router-link>
         <save-me />
         <div class="reg-pass">

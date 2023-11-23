@@ -24,9 +24,9 @@
     a {
       text-decoration: none;
       outline: none;
-      color: #141212;
+      color: #bfbdbd;
       &:hover {
-        color: black;
+        color: blue;
       }
     }
     p {

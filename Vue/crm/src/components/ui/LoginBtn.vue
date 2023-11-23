@@ -1,7 +1,7 @@
 <template>
   <div class="login-btn">
     <button type="button" @click="$emit('click')">
-      {{ labelButton }}
+      <slot />
     </button>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
     labelButton: {
       type: String,
       default: ''
-    }
+    },
   },
 }
 
@@ -37,7 +37,8 @@ export default {
     &:hover {
       border: 2px solid #9b9292;
       border-color: #9b9292;
-      background-color: #4b4545;
+      background-color: #808000;
+      color: black;
     }
   }
 

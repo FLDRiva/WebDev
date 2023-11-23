@@ -66,7 +66,7 @@ export default {
     }
     .base-modal-container {
       width: 35%;
-      height: 80%;
+      height: 45%;
       position: fixed;
       top: 0;
       left: 0;
@@ -86,6 +86,17 @@ export default {
       flex-direction: column;
       align-items: center;
       padding: 2vh;
+      @media (max-width: 1366px) {
+        width: 50%;
+        height: 61%;
+      }
+      @media (max-width: 1024px) {
+        width: 68%;
+      }
+      @media (min-width: 320px) and (max-width: 430px) {
+        width: 95%;
+        height: 57%;
+      }
       .base-modal-header {
         position: relative;
         i {
